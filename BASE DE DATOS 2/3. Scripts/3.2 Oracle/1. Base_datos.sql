@@ -1,0 +1,19 @@
+-- Creacion de Tablespace y Usuario Administrador en Oracle XE 21c
+-- Servicio: XEPDB1 | Esquema: FARMABARRIO_OWNER
+
+ALTER SESSION SET CONTAINER = XEPDB1;
+
+CREATE TABLESPACE ts_farmabarrio
+    DATAFILE 'ts_farmabarrio.dbf' SIZE 100M AUTOEXTEND ON NEXT 50M MAXSIZE 2G
+    EXTENT MANAGEMENT LOCAL AUTOALLOCATE
+    SEGMENT SPACE MANAGEMENT AUTO;
+
+DROP USER farmabarrio_owner CASCADE;
+
+CREATE USER farmabarrio_owner IDENTIFIED BY "FarmaBarrio2026#"
+    DEFAULT TABLESPACE ts_farmabarrio
+    TEMPORARY TABLESPACE temp
+    QUOTA UNLIMITED ON ts_farmabarrio;
+
+GRANT CONNECT, RESOURCE TO farmabarrio_owner;
+GRANT CREATE VIEW, CREATE PROCEDURE, CREATE SEQUENCE, CREATE SYNONYM TO farmabarrio_owner;

@@ -1,0 +1,14 @@
+{
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    }
+  ],
+  "uuid": "fb-pedidos_marketplace-uuid-2026",
+  "collectionName": "pedidos_marketplace",
+  "type": "collection"
+}

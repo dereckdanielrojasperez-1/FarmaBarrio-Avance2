@@ -1,0 +1,14 @@
+{
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    }
+  ],
+  "uuid": "fb-catalogo_medicamentos_cache-uuid-2026",
+  "collectionName": "catalogo_medicamentos_cache",
+  "type": "collection"
+}

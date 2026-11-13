@@ -1,0 +1,2 @@
+-- Snapshot schema export FarmaBarrio Cassandra
+-- Keyspace: farmabarrio_ks
