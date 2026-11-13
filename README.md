@@ -13,12 +13,9 @@
 ## Estructura Oficial del Entregable
 ```
 BASE DE DATOS 2/
-├── 1. Informe/
-│   ├── 1. Informe_Base_Datos.docx
-│   └── 1. Informe_Base_Datos.pdf
 ├── 2. Anexos/
 │   ├── 2.1 Project_Charter.docx
-│   └── 2.2 Diccionario_datos.xlsx
+│   └── 2.2 Diccionario_datos.xlsx (Excel con los 4 motores)
 ├── 3. Scripts/
 │   ├── 3.1 Postgresql/
 │   │   ├── 1. Base_datos.sql
