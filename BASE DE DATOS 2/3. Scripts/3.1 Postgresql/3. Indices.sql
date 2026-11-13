@@ -1,5 +1,5 @@
 -- Indices de optimizacion y planes de ejecucion en PostgreSQL
-BLOQUE 4: ÍNDICES DE OPTIMIZACIÓN Y PLANES DE EJECUCIÓN (EXPLAIN ANALYZE)
+-- Indices de optimizacion de consultas
 
 -- 1. Índice compuesto: inventario(medicamento_id, farmacia_id) - Autor: Maykel Quiñones
 CREATE INDEX idx_inventario_medicamento_farmacia ON inventario(medicamento_id, farmacia_id);

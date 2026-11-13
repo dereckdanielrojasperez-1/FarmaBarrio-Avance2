@@ -1,4 +1,4 @@
-BLOQUE 5: ADMINISTRACIÓN DE USUARIOS EN ORACLE
+-- Administracion de seguridad, roles y usuarios
 -- NOTA: Estos comandos se ejecutan con privilegios administrativos (SYSTEM o SYS)
 /*
 -- 1. Usuario DBA

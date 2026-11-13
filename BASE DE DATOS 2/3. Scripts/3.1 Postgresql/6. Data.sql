@@ -1,5 +1,5 @@
 -- Poblado masivo de datos en PostgreSQL (> 20,000 registros)
-BLOQUE 2: POBLADO MASIVO DE DATOS (DML > 20,000 REGISTROS REALISTAS)
+-- Carga masiva de datos iniciales
 
 -- 2.1 Categorías
 INSERT INTO categoria (nombre, descripcion) VALUES

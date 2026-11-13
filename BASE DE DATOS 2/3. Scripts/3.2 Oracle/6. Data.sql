@@ -1,5 +1,5 @@
 -- Poblado masivo de compras B2B y finanzas en Oracle XE
-BLOQUE 2: POBLADO MASIVO DE DATOS (DML CON CONNECT BY LEVEL)
+-- Carga masiva de datos iniciales
 
 -- 2.1 Proveedores Farmacéuticos
 INSERT INTO proveedor (nombre, ruc, telefono, direccion, email) VALUES

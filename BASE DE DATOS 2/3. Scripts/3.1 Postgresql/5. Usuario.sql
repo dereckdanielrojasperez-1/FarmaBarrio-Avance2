@@ -1,4 +1,4 @@
-BLOQUE 5: SEGURIDAD Y ADMINISTRACIÓN DE USUARIOS
+-- Administracion de seguridad, roles y usuarios
 DO $$
 BEGIN
     IF NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname = 'farma_dba') THEN

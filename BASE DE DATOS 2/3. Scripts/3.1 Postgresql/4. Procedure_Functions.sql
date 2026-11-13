@@ -1,9 +1,9 @@
 -- Funciones y procedimientos almacenados en PostgreSQL (1 por integrante)
--- BLOQUE 3: FUNCIONES Y PROCEDIMIENTOS ALMACENADOS (1 POR INTEGRANTE)
+-- Funciones y procedimientos almacenados
 
 -- FUNCIÓN 1: fn_total_ventas_farmacia
--- AUTOR: QUIÑONES DIEGO, MAYKEL PIERO (Líder)
--- DESCRIPCIÓN: Calcula el total de ventas completadas de una farmacia entre dos fechas.
+-- Autor: Maykel Quiñones
+-- Calcula el total de ventas completadas de una farmacia entre dos fechas.
 CREATE OR REPLACE FUNCTION fn_total_ventas_farmacia(
     p_farmacia_id INT,
     p_fecha_inicio DATE,
@@ -22,8 +22,8 @@ END;
 $$ LANGUAGE plpgsql;
 
 -- PROCEDIMIENTO 2: sp_registrar_entrada_inventario
--- AUTOR: WONG VILLANUEVA, LEONARDO JOSUÉ
--- DESCRIPCIÓN: Registra entrada de mercadería, actualiza stock y genera traza de movimiento.
+-- Autor: Leonardo Wong
+-- Registra entrada de mercadería, actualiza stock y genera traza de movimiento.
 CREATE OR REPLACE PROCEDURE sp_registrar_entrada_inventario(
     p_medicamento_id INT,
     p_farmacia_id    INT,
@@ -67,8 +67,8 @@ END;
 $$;
 
 -- FUNCIÓN 3: fn_calcular_stock_minimo
--- AUTOR: GARCIA ESPEJO, NICOLE ANDREA
--- DESCRIPCIÓN: Valida si el stock actual está por debajo del umbral mínimo configurado.
+-- Autor: Nicole Garcia
+-- Valida si el stock actual está por debajo del umbral mínimo configurado.
 CREATE OR REPLACE FUNCTION fn_calcular_stock_minimo(
     p_medicamento_id INT,
     p_farmacia_id    INT
@@ -97,8 +97,8 @@ END;
 $$ LANGUAGE plpgsql;
 
 -- PROCEDIMIENTO 4: sp_actualizar_precio_medicamento
--- AUTOR: MATENCIO PAUCAR, JORGE FABIAN
--- DESCRIPCIÓN: Actualiza precios de compra/venta asegurando margen positivo de ganancia.
+-- Autor: Jorge Matencio
+-- Actualiza precios de compra/venta asegurando margen positivo de ganancia.
 CREATE OR REPLACE PROCEDURE sp_actualizar_precio_medicamento(
     p_medicamento_id     INT,
     p_nuevo_precio_compra DECIMAL(10,2),
@@ -128,8 +128,8 @@ END;
 $$;
 
 -- FUNCIÓN 5: fn_rotacion_medicamento
--- AUTOR: ROJAS PÉREZ, DERECK
--- DESCRIPCIÓN: Calcula el índice de rotación de stock (unidades vendidas / stock actual).
+-- Autor: Dereck Rojas
+-- Calcula el índice de rotación de stock (unidades vendidas / stock actual).
 CREATE OR REPLACE FUNCTION fn_rotacion_medicamento(
     p_medicamento_id INT,
     p_farmacia_id    INT

@@ -1,4 +1,3 @@
--- ============================================================================
 -- PROYECTO: FARMABARRIO - RED DE FARMACIAS INDEPENDIENTES DEL PERÚ
 -- CURSO: BASE DE DATOS II (UTP) - 1ER ENTREGABLE
 -- MOTOR: POSTGRESQL (NÚCLEO OPERATIVO Y TRANSACCIONAL B2C)
@@ -9,11 +8,8 @@
 --   3. GARCIA ESPEJO, NICOLE ANDREA (DBA MongoDB / Analista NoSQL)
 --   4. MATENCIO PAUCAR, JORGE FABIAN (Big Data Engineer / Analista Hadoop)
 --   5. ROJAS PÉREZ, DERECK (DBA Cassandra / Analista Series Temporales)
--- ============================================================================
 
--- ============================================================================
--- BLOQUE 0: LIMPIEZA INICIAL EN ORDEN INVERSO DE DEPENDENCIAS (EVITA ERROR 42P07)
--- ============================================================================
+-- Limpieza de tablas previas en orden de dependencias
 DROP TABLE IF EXISTS detalle_venta CASCADE;
 DROP TABLE IF EXISTS venta CASCADE;
 DROP TABLE IF EXISTS movimiento_inventario CASCADE;
@@ -33,9 +29,7 @@ DROP FUNCTION IF EXISTS fn_calcular_stock_minimo(INT, INT) CASCADE;
 DROP PROCEDURE IF EXISTS sp_actualizar_precio_medicamento(INT, DECIMAL, DECIMAL) CASCADE;
 DROP FUNCTION IF EXISTS fn_rotacion_medicamento(INT, INT) CASCADE;
 
--- ============================================================================
--- BLOQUE 1: DEFINICIÓN DE TABLAS (DDL - 11 TABLAS RELACIONALES EN ESQUEMA public)
--- ============================================================================
+-- Definicion de tablas del modelo relacional
 
 -- 1. TABLA: categoria
 CREATE TABLE categoria (
@@ -191,9 +185,7 @@ CREATE TABLE detalle_venta (
     subtotal DECIMAL(10,2) NOT NULL
 );
 
--- ============================================================================
--- BLOQUE 2: POBLADO MASIVO DE DATOS (DML > 20,000 REGISTROS REALISTAS)
--- ============================================================================
+-- Carga masiva de datos iniciales
 
 -- 2.1 Categorías
 INSERT INTO categoria (nombre, descripcion) VALUES
@@ -391,15 +383,11 @@ FROM (
 ) dt
 WHERE v.venta_id = dt.venta_id;
 
--- ============================================================================
--- BLOQUE 3: FUNCIONES Y PROCEDIMIENTOS ALMACENADOS (1 POR INTEGRANTE)
--- ============================================================================
+-- Funciones y procedimientos almacenados
 
--- ----------------------------------------------------------------------------
 -- FUNCIÓN 1: fn_total_ventas_farmacia
--- AUTOR: QUIÑONES DIEGO, MAYKEL PIERO (Líder)
--- DESCRIPCIÓN: Calcula el total de ventas completadas de una farmacia entre dos fechas.
--- ----------------------------------------------------------------------------
+-- Autor: Maykel Quiñones
+-- Calcula el total de ventas completadas de una farmacia entre dos fechas.
 CREATE OR REPLACE FUNCTION fn_total_ventas_farmacia(
     p_farmacia_id INT,
     p_fecha_inicio DATE,
@@ -417,11 +405,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ----------------------------------------------------------------------------
 -- PROCEDIMIENTO 2: sp_registrar_entrada_inventario
--- AUTOR: WONG VILLANUEVA, LEONARDO JOSUÉ
--- DESCRIPCIÓN: Registra entrada de mercadería, actualiza stock y genera traza de movimiento.
--- ----------------------------------------------------------------------------
+-- Autor: Leonardo Wong
+-- Registra entrada de mercadería, actualiza stock y genera traza de movimiento.
 CREATE OR REPLACE PROCEDURE sp_registrar_entrada_inventario(
     p_medicamento_id INT,
     p_farmacia_id    INT,
@@ -464,11 +450,9 @@ BEGIN
 END;
 $$;
 
--- ----------------------------------------------------------------------------
 -- FUNCIÓN 3: fn_calcular_stock_minimo
--- AUTOR: GARCIA ESPEJO, NICOLE ANDREA
--- DESCRIPCIÓN: Valida si el stock actual está por debajo del umbral mínimo configurado.
--- ----------------------------------------------------------------------------
+-- Autor: Nicole Garcia
+-- Valida si el stock actual está por debajo del umbral mínimo configurado.
 CREATE OR REPLACE FUNCTION fn_calcular_stock_minimo(
     p_medicamento_id INT,
     p_farmacia_id    INT
@@ -496,11 +480,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ----------------------------------------------------------------------------
 -- PROCEDIMIENTO 4: sp_actualizar_precio_medicamento
--- AUTOR: MATENCIO PAUCAR, JORGE FABIAN
--- DESCRIPCIÓN: Actualiza precios de compra/venta asegurando margen positivo de ganancia.
--- ----------------------------------------------------------------------------
+-- Autor: Jorge Matencio
+-- Actualiza precios de compra/venta asegurando margen positivo de ganancia.
 CREATE OR REPLACE PROCEDURE sp_actualizar_precio_medicamento(
     p_medicamento_id     INT,
     p_nuevo_precio_compra DECIMAL(10,2),
@@ -529,11 +511,9 @@ BEGIN
 END;
 $$;
 
--- ----------------------------------------------------------------------------
 -- FUNCIÓN 5: fn_rotacion_medicamento
--- AUTOR: ROJAS PÉREZ, DERECK
--- DESCRIPCIÓN: Calcula el índice de rotación de stock (unidades vendidas / stock actual).
--- ----------------------------------------------------------------------------
+-- Autor: Dereck Rojas
+-- Calcula el índice de rotación de stock (unidades vendidas / stock actual).
 CREATE OR REPLACE FUNCTION fn_rotacion_medicamento(
     p_medicamento_id INT,
     p_farmacia_id    INT
@@ -568,9 +548,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ============================================================================
--- BLOQUE 4: ÍNDICES DE OPTIMIZACIÓN Y PLANES DE EJECUCIÓN (EXPLAIN ANALYZE)
--- ============================================================================
+-- Indices de optimizacion de consultas
 
 -- 1. Índice compuesto: inventario(medicamento_id, farmacia_id) - Autor: Maykel Quiñones
 CREATE INDEX idx_inventario_medicamento_farmacia ON inventario(medicamento_id, farmacia_id);
@@ -597,9 +575,7 @@ EXPLAIN ANALYZE
 SELECT * FROM inventario
 WHERE medicamento_id = 1 AND farmacia_id = 1;
 
--- ============================================================================
--- BLOQUE 5: SEGURIDAD Y ADMINISTRACIÓN DE USUARIOS
--- ============================================================================
+-- Administracion de seguridad, roles y usuarios
 DO $$
 BEGIN
     IF NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname = 'farma_dba') THEN
@@ -627,9 +603,7 @@ GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO farma_app;
 -- farma_readonly: Solo consulta para auditoría y reportes
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO farma_readonly;
 
--- ============================================================================
--- BLOQUE 6: PRUEBAS DE EJECUCIÓN DE PROCEDIMIENTOS (EVIDENCIA)
--- ============================================================================
+-- Pruebas de ejecucion de procedimientos y funciones
 -- Prueba 1 (Maykel Quiñones):
 SELECT fn_total_ventas_farmacia(1, '2024-01-01', '2026-12-31') AS total_ventas_farmacia_1;
 
@@ -645,9 +619,7 @@ CALL sp_actualizar_precio_medicamento(1, 9.00, 16.50);
 -- Prueba 5 (Dereck Rojas):
 SELECT fn_rotacion_medicamento(1, 1) AS indice_rotacion_medicamento;
 
--- ============================================================================
 -- VERIFICACIÓN FINAL DE REGISTROS INSERTADOS
--- ============================================================================
 SELECT 'categoria' AS tabla, COUNT(*) AS total_registros FROM categoria
 UNION ALL SELECT 'marca', COUNT(*) FROM marca
 UNION ALL SELECT 'laboratorio', COUNT(*) FROM laboratorio

@@ -1,5 +1,5 @@
 -- Tablas del modelo financiero y compras B2B en Oracle XE (10 tablas + puente)
-BLOQUE 0: LIMPIEZA INICIAL SEGURA (DROP TABLE CON CASCADE CONSTRAINTS PURGE)
+-- Limpieza de tablas previas en orden de dependencias
 BEGIN
     FOR t IN (
         SELECT table_name FROM user_tables 
@@ -19,7 +19,7 @@ END;
 /
 
 -- 
-BLOQUE 1: DEFINICIÓN DE TABLAS (DDL - 10 TABLAS FINANCIERAS + 1 PUENTE)
+-- Definicion de tablas del modelo relacional
 
 -- 1. TABLA: proveedor (Laboratorios y distribuidores mayoristas de medicamentos)
 CREATE TABLE proveedor (

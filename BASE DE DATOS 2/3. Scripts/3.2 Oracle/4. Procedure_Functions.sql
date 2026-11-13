@@ -1,9 +1,9 @@
 -- Procedimientos, funciones y paquetes PL/SQL en Oracle (1 por integrante)
--- BLOQUE 3: FUNCIONES Y PROCEDIMIENTOS ALMACENADOS PL/SQL (1 POR INTEGRANTE)
+-- Funciones y procedimientos almacenados
 
 -- PROCEDIMIENTO 1: sp_actualizar_compras_vencidas
--- AUTOR: QUIÑONES DIEGO, MAYKEL PIERO (Líder)
--- DESCRIPCIÓN: Anula automáticamente órdenes de compra pendientes con más de 90 días.
+-- Autor: Maykel Quiñones
+-- Anula automáticamente órdenes de compra pendientes con más de 90 días.
 CREATE OR REPLACE PROCEDURE sp_actualizar_compras_vencidas
 IS
     v_count NUMBER := 0;
@@ -25,8 +25,8 @@ END sp_actualizar_compras_vencidas;
 /
 
 -- FUNCIÓN 2: fn_total_compras_proveedor
--- AUTOR: WONG VILLANUEVA, LEONARDO JOSUÉ
--- DESCRIPCIÓN: Calcula el acumulado anual de compras a un proveedor específico.
+-- Autor: Leonardo Wong
+-- Calcula el acumulado anual de compras a un proveedor específico.
 CREATE OR REPLACE FUNCTION fn_total_compras_proveedor(
     p_proveedor_id IN NUMBER,
     p_anio         IN NUMBER
@@ -49,8 +49,8 @@ END fn_total_compras_proveedor;
 /
 
 -- FUNCIÓN 3: fn_promedio_compras_mes
--- AUTOR: GARCIA ESPEJO, NICOLE ANDREA
--- DESCRIPCIÓN: Retorna el promedio del monto de compras realizadas en un mes y año dados.
+-- Autor: Nicole Garcia
+-- Retorna el promedio del monto de compras realizadas en un mes y año dados.
 CREATE OR REPLACE FUNCTION fn_promedio_compras_mes(
     p_mes  IN NUMBER,
     p_anio IN NUMBER
@@ -73,8 +73,8 @@ END fn_promedio_compras_mes;
 /
 
 -- PROCEDIMIENTO 4: sp_registrar_pago_proveedor
--- AUTOR: MATENCIO PAUCAR, JORGE FABIAN
--- DESCRIPCIÓN: Registra un abono a proveedor y si cubre el total, actualiza compra a 'PAGADA'.
+-- Autor: Jorge Matencio
+-- Registra un abono a proveedor y si cubre el total, actualiza compra a 'PAGADA'.
 CREATE OR REPLACE PROCEDURE sp_registrar_pago_proveedor(
     p_proveedor_id IN NUMBER,
     p_compra_id    IN NUMBER,
@@ -122,8 +122,8 @@ END sp_registrar_pago_proveedor;
 /
 
 -- FUNCIÓN 5: fn_saldo_pendiente_proveedor
--- AUTOR: ROJAS PÉREZ, DERECK
--- DESCRIPCIÓN: Calcula la deuda viva pendiente restando total de compras menos pagos recibidos.
+-- Autor: Dereck Rojas
+-- Calcula la deuda viva pendiente restando total de compras menos pagos recibidos.
 CREATE OR REPLACE FUNCTION fn_saldo_pendiente_proveedor(
     p_proveedor_id IN NUMBER
 ) RETURN NUMBER

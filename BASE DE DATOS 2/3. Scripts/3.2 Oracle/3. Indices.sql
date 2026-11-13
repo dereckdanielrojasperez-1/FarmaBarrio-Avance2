@@ -1,5 +1,5 @@
 -- Indices de optimizacion B-tree en Oracle XE 21c
-BLOQUE 4: ÍNDICES DE OPTIMIZACIÓN (RESOLUCIÓN CRÍTICA DE ERROR ORA-01408)
+-- Indices de optimizacion de consultas
 -- NOTA TÉCNICA: En Oracle, definir una restricción UNIQUE en la columna 'ruc' de 'proveedor'
 -- crea automáticamente un índice único interno. Intentar crear otro índice manual sobre 'ruc'
 -- genera el error ORA-01408 ("such column list already indexed"). Por buenas prácticas, se

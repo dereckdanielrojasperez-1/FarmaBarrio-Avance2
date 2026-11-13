@@ -1,5 +1,5 @@
 -- Tablas del modelo relacional FarmaBarrio (11 tablas en esquema public)
-BLOQUE 0: LIMPIEZA INICIAL EN ORDEN INVERSO DE DEPENDENCIAS (EVITA ERROR 42P07)
+-- Limpieza de tablas previas en orden de dependencias
 DROP TABLE IF EXISTS detalle_venta CASCADE;
 DROP TABLE IF EXISTS venta CASCADE;
 DROP TABLE IF EXISTS movimiento_inventario CASCADE;
@@ -20,7 +20,7 @@ DROP PROCEDURE IF EXISTS sp_actualizar_precio_medicamento(INT, DECIMAL, DECIMAL)
 DROP FUNCTION IF EXISTS fn_rotacion_medicamento(INT, INT) CASCADE;
 
 -- 
-BLOQUE 1: DEFINICIÓN DE TABLAS (DDL - 11 TABLAS RELACIONALES EN ESQUEMA public)
+-- Definicion de tablas del modelo relacional
 
 -- 1. TABLA: categoria
 CREATE TABLE categoria (

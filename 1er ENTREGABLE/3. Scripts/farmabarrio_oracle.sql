@@ -1,4 +1,3 @@
--- ============================================================================
 -- PROYECTO: FARMABARRIO - RED DE FARMACIAS INDEPENDIENTES DEL PERÚ
 -- CURSO: BASE DE DATOS II (UTP) - 1ER ENTREGABLE
 -- MOTOR: ORACLE DATABASE (NÚCLEO FINANCIERO Y COMPRAS B2B)
@@ -9,13 +8,10 @@
 --   3. GARCIA ESPEJO, NICOLE ANDREA (DBA MongoDB / Analista NoSQL)
 --   4. MATENCIO PAUCAR, JORGE FABIAN (Big Data Engineer / Analista Hadoop)
 --   5. ROJAS PÉREZ, DERECK (DBA Cassandra / Analista Series Temporales)
--- ============================================================================
 
 SET SERVEROUTPUT ON SIZE UNLIMITED;
 
--- ============================================================================
--- BLOQUE 0: LIMPIEZA INICIAL SEGURA (DROP TABLE CON CASCADE CONSTRAINTS PURGE)
--- ============================================================================
+-- Limpieza de tablas previas en orden de dependencias
 BEGIN
     FOR t IN (
         SELECT table_name FROM user_tables 
@@ -34,9 +30,7 @@ EXCEPTION
 END;
 /
 
--- ============================================================================
--- BLOQUE 1: DEFINICIÓN DE TABLAS (DDL - 10 TABLAS FINANCIERAS + 1 PUENTE)
--- ============================================================================
+-- Definicion de tablas del modelo relacional
 
 -- 1. TABLA: proveedor (Laboratorios y distribuidores mayoristas de medicamentos)
 CREATE TABLE proveedor (
@@ -161,9 +155,7 @@ CREATE TABLE detalle_asiento (
     total_haber NUMBER(10,2) DEFAULT 0.00 NOT NULL
 );
 
--- ============================================================================
--- BLOQUE 2: POBLADO MASIVO DE DATOS (DML CON CONNECT BY LEVEL)
--- ============================================================================
+-- Carga masiva de datos iniciales
 
 -- 2.1 Proveedores Farmacéuticos
 INSERT INTO proveedor (nombre, ruc, telefono, direccion, email) VALUES
@@ -317,15 +309,11 @@ SELECT a.asiento_id, 3, 1, 0.00, a.total_haber FROM asiento_contable a;
 
 COMMIT;
 
--- ============================================================================
--- BLOQUE 3: FUNCIONES Y PROCEDIMIENTOS ALMACENADOS PL/SQL (1 POR INTEGRANTE)
--- ============================================================================
+-- Funciones y procedimientos almacenados
 
--- ----------------------------------------------------------------------------
 -- PROCEDIMIENTO 1: sp_actualizar_compras_vencidas
--- AUTOR: QUIÑONES DIEGO, MAYKEL PIERO (Líder)
--- DESCRIPCIÓN: Anula automáticamente órdenes de compra pendientes con más de 90 días.
--- ----------------------------------------------------------------------------
+-- Autor: Maykel Quiñones
+-- Anula automáticamente órdenes de compra pendientes con más de 90 días.
 CREATE OR REPLACE PROCEDURE sp_actualizar_compras_vencidas
 IS
     v_count NUMBER := 0;
@@ -346,11 +334,9 @@ EXCEPTION
 END sp_actualizar_compras_vencidas;
 /
 
--- ----------------------------------------------------------------------------
 -- FUNCIÓN 2: fn_total_compras_proveedor
--- AUTOR: WONG VILLANUEVA, LEONARDO JOSUÉ
--- DESCRIPCIÓN: Calcula el acumulado anual de compras a un proveedor específico.
--- ----------------------------------------------------------------------------
+-- Autor: Leonardo Wong
+-- Calcula el acumulado anual de compras a un proveedor específico.
 CREATE OR REPLACE FUNCTION fn_total_compras_proveedor(
     p_proveedor_id IN NUMBER,
     p_anio         IN NUMBER
@@ -372,11 +358,9 @@ EXCEPTION
 END fn_total_compras_proveedor;
 /
 
--- ----------------------------------------------------------------------------
 -- FUNCIÓN 3: fn_promedio_compras_mes
--- AUTOR: GARCIA ESPEJO, NICOLE ANDREA
--- DESCRIPCIÓN: Retorna el promedio del monto de compras realizadas en un mes y año dados.
--- ----------------------------------------------------------------------------
+-- Autor: Nicole Garcia
+-- Retorna el promedio del monto de compras realizadas en un mes y año dados.
 CREATE OR REPLACE FUNCTION fn_promedio_compras_mes(
     p_mes  IN NUMBER,
     p_anio IN NUMBER
@@ -398,11 +382,9 @@ EXCEPTION
 END fn_promedio_compras_mes;
 /
 
--- ----------------------------------------------------------------------------
 -- PROCEDIMIENTO 4: sp_registrar_pago_proveedor
--- AUTOR: MATENCIO PAUCAR, JORGE FABIAN
--- DESCRIPCIÓN: Registra un abono a proveedor y si cubre el total, actualiza compra a 'PAGADA'.
--- ----------------------------------------------------------------------------
+-- Autor: Jorge Matencio
+-- Registra un abono a proveedor y si cubre el total, actualiza compra a 'PAGADA'.
 CREATE OR REPLACE PROCEDURE sp_registrar_pago_proveedor(
     p_proveedor_id IN NUMBER,
     p_compra_id    IN NUMBER,
@@ -449,11 +431,9 @@ EXCEPTION
 END sp_registrar_pago_proveedor;
 /
 
--- ----------------------------------------------------------------------------
 -- FUNCIÓN 5: fn_saldo_pendiente_proveedor
--- AUTOR: ROJAS PÉREZ, DERECK
--- DESCRIPCIÓN: Calcula la deuda viva pendiente restando total de compras menos pagos recibidos.
--- ----------------------------------------------------------------------------
+-- Autor: Dereck Rojas
+-- Calcula la deuda viva pendiente restando total de compras menos pagos recibidos.
 CREATE OR REPLACE FUNCTION fn_saldo_pendiente_proveedor(
     p_proveedor_id IN NUMBER
 ) RETURN NUMBER
@@ -487,9 +467,7 @@ EXCEPTION
 END fn_saldo_pendiente_proveedor;
 /
 
--- ============================================================================
--- BLOQUE 4: ÍNDICES DE OPTIMIZACIÓN (RESOLUCIÓN CRÍTICA DE ERROR ORA-01408)
--- ============================================================================
+-- Indices de optimizacion de consultas
 -- NOTA TÉCNICA: En Oracle, definir una restricción UNIQUE en la columna 'ruc' de 'proveedor'
 -- crea automáticamente un índice único interno. Intentar crear otro índice manual sobre 'ruc'
 -- genera el error ORA-01408 ("such column list already indexed"). Por buenas prácticas, se
@@ -519,9 +497,7 @@ WHERE c.proveedor_id = 1 AND c.estado = 'PAGADA';
 
 SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY());
 
--- ============================================================================
--- BLOQUE 5: ADMINISTRACIÓN DE USUARIOS EN ORACLE
--- ============================================================================
+-- Administracion de seguridad, roles y usuarios
 -- NOTA: Estos comandos se ejecutan con privilegios administrativos (SYSTEM o SYS)
 /*
 -- 1. Usuario DBA
@@ -546,9 +522,7 @@ GRANT SELECT ON farmabarrio_owner.proveedor TO farma_readonly;
 GRANT SELECT ON farmabarrio_owner.pagos_proveedor TO farma_readonly;
 */
 
--- ============================================================================
--- BLOQUE 6: PRUEBAS DE EJECUCIÓN DE PROCEDIMIENTOS (EVIDENCIA)
--- ============================================================================
+-- Pruebas de ejecucion de procedimientos y funciones
 -- Prueba 1 (Maykel Quiñones):
 EXEC sp_actualizar_compras_vencidas;
 
@@ -564,9 +538,7 @@ EXEC sp_registrar_pago_proveedor(1, 1, 500.00, 'TRANSFERENCIA');
 -- Prueba 5 (Dereck Rojas):
 SELECT fn_saldo_pendiente_proveedor(1) AS saldo_pendiente_prov_1 FROM dual;
 
--- ============================================================================
 -- VERIFICACIÓN FINAL DE REGISTROS INSERTADOS EN ORACLE
--- ============================================================================
 SELECT 'PROVEEDOR' AS tabla, COUNT(*) AS total_registros FROM proveedor
 UNION ALL SELECT 'MEDICAMENTO_REF', COUNT(*) FROM medicamento_ref
 UNION ALL SELECT 'IMPUESTOS', COUNT(*) FROM impuestos
