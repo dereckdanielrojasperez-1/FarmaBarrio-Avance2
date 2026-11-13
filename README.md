@@ -1,0 +1,64 @@
+# PROYECTO FARMABARRIO — BASE DE DATOS II (UTP)
+## Red Colaborativa de Farmacias Independientes del Perú
+**2do Entregable (Semana 14 - Avance 50% Unidad 2)**  
+**Docente:** Mag. José Bustamante  
+**Sección:** 41483 | **Grupo:** 2  
+
+### Integrantes:
+1. Quiñones Diego, Maykel Piero (Líder / Data Architect)
+2. Wong Villanueva, Leonardo Josué (DBA Oracle / Analista Financiero)
+3. Garcia Espejo, Nicole Andrea (DBA MongoDB / Analista NoSQL)
+4. Matencio Paucar, Jorge Fabian (Big Data Engineer / Analista Hadoop)
+5. Rojas Pérez, Dereck Daniel (DBA Cassandra / Analista Series Temporales)
+
+---
+
+### Estructura Oficial del Repositorio:
+```text
+BASE DE DATOS 2/
+├── 1. Informe/
+│   ├── 1. Informe_Base_Datos.docx
+│   └── 1. Informe_Base_Datos.pdf
+├── 2. Anexos/
+│   ├── 2.1 Project_Charter.docx
+│   └── 2.2 Diccionario_datos.xlsx (4 motores: PG, Oracle, Mongo, Cassandra)
+├── 3. Scripts/
+│   ├── 3.1 Postgresql/
+│   │   ├── Fragmentacion/ (01_Venta, 02_Validaciones, 03_Rollback, Diagrama)
+│   │   ├── 1. Base_datos.sql
+│   │   ├── 2. Tablas.sql
+│   │   ├── 3. Indices.sql
+│   │   ├── 4. Procedure_Functions.sql
+│   │   ├── 5. Usuario.sql
+│   │   ├── 6. Data.sql
+│   │   ├── 7. Backups_Restore.sql
+│   │   └── DiagramaLogico.jpg (Crow's Foot)
+│   ├── 3.2 Oracle/
+│   │   ├── Fragmentacion/ (01_Compra, 02_Validaciones, Diagrama)
+│   │   ├── 1. Base_datos.sql
+│   │   ├── 2. Tablas.sql
+│   │   ├── 3. Indices.sql
+│   │   ├── 4. Procedure_Functions.sql
+│   │   ├── 5. Usuario.sql
+│   │   ├── 6. Data.sql
+│   │   ├── 7. Backups_Restore.sql
+│   │   └── DiagramaLogico.jpg (Crow's Foot)
+│   ├── 3.3 MongoDB/
+│   │   ├── Replicacion/
+│   │   │   └── rs_config.js
+│   │   ├── 1. Colecciones.js
+│   │   ├── 2. Data_500_registros.js
+│   │   ├── 3. Consultas_Agregacion.js
+│   │   ├── 4. Usuarios_Mongo.js
+│   │   └── 5. Backup_Restore_Mongo.bat
+│   └── 3.4 Cassandra/
+│       ├── 1. Keyspace_Tablas.cql
+│       ├── 2. Data_500_registros.cql
+│       ├── 3. Consultas_Series_Tiempo.cql
+│       ├── 4. Usuarios_Cassandra.cql
+│       └── 5. Backup_Snapshot.bat
+└── 4. Backups/
+    ├── farmabarrio_full.backup
+    ├── dump_mongodb/
+    └── snapshot_cassandra/
+```
