@@ -1,10 +1,7 @@
-# PROYECTO FARMABARRIO — BASE DE DATOS II (UTP)
-## Red Colaborativa de Farmacias Independientes del Perú
-**2do Entregable (Semana 14 - Avance 50% Unidad 2)**  
+# FarmaBarrio - Segundo Entregable (Semana 14)
+**Curso:** Base de Datos II (Sección 41483)  
 **Docente:** Mag. José Bustamante  
-**Sección:** 41483 | **Grupo:** 2  
-
-### Integrantes:
+**Equipo de Proyecto (Grupo 2):**
 1. Quiñones Diego, Maykel Piero (Líder / Data Architect)
 2. Wong Villanueva, Leonardo Josué (DBA Oracle / Analista Financiero)
 3. Garcia Espejo, Nicole Andrea (DBA MongoDB / Analista NoSQL)
@@ -13,18 +10,17 @@
 
 ---
 
-### Estructura Oficial del Repositorio:
-```text
+## Estructura Oficial del Entregable
+```
 BASE DE DATOS 2/
 ├── 1. Informe/
 │   ├── 1. Informe_Base_Datos.docx
 │   └── 1. Informe_Base_Datos.pdf
 ├── 2. Anexos/
 │   ├── 2.1 Project_Charter.docx
-│   └── 2.2 Diccionario_datos.xlsx (4 motores: PG, Oracle, Mongo, Cassandra)
+│   └── 2.2 Diccionario_datos.xlsx
 ├── 3. Scripts/
 │   ├── 3.1 Postgresql/
-│   │   ├── Fragmentacion/ (01_Venta, 02_Validaciones, 03_Rollback, Diagrama)
 │   │   ├── 1. Base_datos.sql
 │   │   ├── 2. Tablas.sql
 │   │   ├── 3. Indices.sql
@@ -32,9 +28,9 @@ BASE DE DATOS 2/
 │   │   ├── 5. Usuario.sql
 │   │   ├── 6. Data.sql
 │   │   ├── 7. Backups_Restore.sql
-│   │   └── DiagramaLogico.jpg (Crow's Foot)
+│   │   ├── DiagramaLogico.jpg
+│   │   └── Fragmentacion/
 │   ├── 3.2 Oracle/
-│   │   ├── Fragmentacion/ (01_Compra, 02_Validaciones, Diagrama)
 │   │   ├── 1. Base_datos.sql
 │   │   ├── 2. Tablas.sql
 │   │   ├── 3. Indices.sql
@@ -42,15 +38,15 @@ BASE DE DATOS 2/
 │   │   ├── 5. Usuario.sql
 │   │   ├── 6. Data.sql
 │   │   ├── 7. Backups_Restore.sql
-│   │   └── DiagramaLogico.jpg (Crow's Foot)
+│   │   ├── DiagramaLogico.jpg
+│   │   └── Fragmentacion/
 │   ├── 3.3 MongoDB/
-│   │   ├── Replicacion/
-│   │   │   └── rs_config.js
 │   │   ├── 1. Colecciones.js
 │   │   ├── 2. Data_500_registros.js
 │   │   ├── 3. Consultas_Agregacion.js
 │   │   ├── 4. Usuarios_Mongo.js
-│   │   └── 5. Backup_Restore_Mongo.bat
+│   │   ├── 5. Backup_Restore_Mongo.bat
+│   │   └── Replicacion/
 │   └── 3.4 Cassandra/
 │       ├── 1. Keyspace_Tablas.cql
 │       ├── 2. Data_500_registros.cql
