@@ -2,7 +2,7 @@
 -- Comandos expdp e impdp con sentencias de validacion
 
 -- 1. Configuracion del directorio de respaldo en Oracle (ejecutar como SYSTEM)
--- CREATE OR REPLACE DIRECTORY dpump_farmabarrio AS 'C:\Users\Computecno\Documents\Bd2\BASE DE DATOS 2\4. Backups';
+-- CREATE OR REPLACE DIRECTORY dpump_farmabarrio AS '..\..\4. Backups';
 -- GRANT READ, WRITE ON DIRECTORY dpump_farmabarrio TO farmabarrio_owner;
 
 -- 2. Comando de Exportacion Logica (Backup completo del esquema)

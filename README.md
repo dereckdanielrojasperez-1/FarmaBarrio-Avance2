@@ -17,7 +17,7 @@
 BASE DE DATOS 2/
 ├── 1. Informe/
 │   ├── 1. Informe_Base_Datos.docx (Informe técnico consolidado con 85 evidencias y 38 tablas)
-│   └── 1. Informe_Base_Datos.pdf (Exportación PDF oficial nativa)
+│   └── 1. Informe_Base_Datos.pdf (Exportación PDF oficial nativa UTP)
 ├── 2. Anexos/
 │   ├── 2.1 Project_Charter.docx
 │   └── 2.2 Diccionario_datos.xlsx (Catálogo consolidado de 30 entidades en PostgreSQL, Oracle, MongoDB y Cassandra)
@@ -48,13 +48,19 @@ BASE DE DATOS 2/
 │   │   ├── 3. Consultas_Agregacion.js
 │   │   ├── 4. Usuarios_Mongo.js
 │   │   ├── 5. Backup_Restore_Mongo.bat
+│   │   ├── 6. Data.js (Alias estándar con 500 registros)
+│   │   ├── 7. Backups_Restore.bat (Rutas relativas %~dp0)
+│   │   ├── 7. Backups_Restore.ps1
 │   │   └── Replicacion/rs_config.js
 │   └── 3.4 Cassandra/
 │       ├── 1. Keyspace_Tablas.cql
 │       ├── 2. Data_500_registros.cql
 │       ├── 3. Consultas_Series_Tiempo.cql
 │       ├── 4. Usuarios_Cassandra.cql
-│       └── 5. Backup_Snapshot.bat
+│       ├── 5. Backup_Snapshot.bat
+│       ├── 6. Data.cql (Alias estándar con 500 registros CQL)
+│       ├── 7. Backups_Restore.bat (Rutas relativas %~dp0)
+│       └── 7. Backups_Restore.ps1
 └── 4. Backups/
     ├── farmabarrio_full.backup
     ├── dump_mongodb/farmabarrio_nosql/

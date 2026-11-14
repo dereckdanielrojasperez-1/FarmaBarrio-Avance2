@@ -5,7 +5,7 @@ rem Herramientas oficiales: nodetool snapshot y cqlsh COPY
 set CASSANDRA_HOST=localhost
 set CASSANDRA_KEYSPACE=farmabarrio_ks
 set SNAPSHOT_NAME=FarmaBarrio_Avance2_Semana14
-set BACKUP_DIR=C:\Users\Computecno\Documents\Bd2\BASE DE DATOS 2\4. Backups\snapshot_cassandra
+set BACKUP_DIR=%~dp0..\..\4. Backups\snapshot_cassandra
 
 echo Creando Snapshot fisico de Cassandra (%CASSANDRA_KEYSPACE%)...
 nodetool snapshot -t %SNAPSHOT_NAME% %CASSANDRA_KEYSPACE%

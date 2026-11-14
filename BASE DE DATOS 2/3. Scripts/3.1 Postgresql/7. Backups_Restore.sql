@@ -1,12 +1,12 @@
 -- Procedimientos de respaldo logico y restauracion en PostgreSQL
 -- Comandos CLI para pg_dump y pg_restore con verificacion de integridad
 
--- 1. Comando de Respaldo Completo ejecutado en PowerShell o CMD
--- pg_dump -U postgres -F c -b -v -f "C:\Users\Computecno\Documents\Bd2\BASE DE DATOS 2\4. Backups\farmabarrio_full.backup" farmabarrio_db
+-- 1. Comando de Respaldo Completo ejecutado en PowerShell o CMD (ruta relativa al directorio 4. Backups)
+-- pg_dump -U postgres -F c -b -v -f "..\..\4. Backups\farmabarrio_full.backup" farmabarrio_db
 
 -- 2. Comando de Restauracion en Base de Datos de Contingencia
 -- createdb -U postgres farmabarrio_restored
--- pg_restore -U postgres -d farmabarrio_restored -v "C:\Users\Computecno\Documents\Bd2\BASE DE DATOS 2\4. Backups\farmabarrio_full.backup"
+-- pg_restore -U postgres -d farmabarrio_restored -v "..\..\4. Backups\farmabarrio_full.backup"
 
 -- 3. Verificacion de consistencia y conteo de filas post-restauracion
 SELECT 'farmacia' AS tabla, COUNT(*) AS total_filas FROM farmacia
