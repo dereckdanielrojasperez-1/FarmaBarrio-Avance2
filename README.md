@@ -20,7 +20,7 @@ BASE DE DATOS 2/
 │   └── 1. Informe_Base_Datos.pdf (Exportación PDF oficial nativa)
 ├── 2. Anexos/
 │   ├── 2.1 Project_Charter.docx
-│   └── 2.2 Diccionario_datos.xlsx (Catálogo de 28 entidades en PostgreSQL, Oracle, MongoDB y Cassandra)
+│   └── 2.2 Diccionario_datos.xlsx (Catálogo consolidado de 30 entidades en PostgreSQL, Oracle, MongoDB y Cassandra)
 ├── 3. Scripts/
 │   ├── 3.1 Postgresql/
 │   │   ├── 1. Base_datos.sql
