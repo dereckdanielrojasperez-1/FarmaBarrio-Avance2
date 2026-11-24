@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  cassandra-node1:
+    image: cassandra:5.0
+    container_name: cassandra-node1
+    ports:
+      - "9042:9042"
+    environment:
+      - CASSANDRA_CLUSTER_NAME=FarmaBarrioCluster
+      - CASSANDRA_DC=datacenter1
+      - CASSANDRA_RACK=rack1
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+
+  cassandra-node2:
+    image: cassandra:5.0
+    container_name: cassandra-node2
+    ports:
+      - "9043:9042"
+    environment:
+      - CASSANDRA_CLUSTER_NAME=FarmaBarrioCluster
+      - CASSANDRA_SEEDS=cassandra-node1
+      - CASSANDRA_DC=datacenter1
+      - CASSANDRA_RACK=rack1
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+    depends_on:
+      - cassandra-node1
+
+  cassandra-node3:
+    image: cassandra:5.0
+    container_name: cassandra-node3
+    ports:
+      - "9044:9042"
+    environment:
+      - CASSANDRA_CLUSTER_NAME=FarmaBarrioCluster
+      - CASSANDRA_SEEDS=cassandra-node1
+      - CASSANDRA_DC=datacenter1
+      - CASSANDRA_RACK=rack1
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+    depends_on:
+      - cassandra-node1

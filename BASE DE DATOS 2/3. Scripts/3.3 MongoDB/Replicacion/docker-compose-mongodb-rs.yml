@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  mongo-node1:
+    image: mongo:latest
+    container_name: mongo-node1
+    command: mongod --replSet rs0 --bind_ip_all --port 27017
+    ports:
+      - "27017:27017"
+
+  mongo-node2:
+    image: mongo:latest
+    container_name: mongo-node2
+    command: mongod --replSet rs0 --bind_ip_all --port 27018
+    ports:
+      - "27018:27018"
+
+  mongo-node3:
+    image: mongo:latest
+    container_name: mongo-node3
+    command: mongod --replSet rs0 --bind_ip_all --port 27019
+    ports:
+      - "27019:27019"
