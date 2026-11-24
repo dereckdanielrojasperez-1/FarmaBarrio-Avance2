@@ -1,45 +1,43 @@
-// Administracion de usuarios y control de acceso en MongoDB
-// Autenticacion sobre la base admin y permisos en farmabarrio_nosql
+// Administración de Usuarios y Principio de Mínimo Privilegio en MongoDB
+// Autenticación en base admin | Privilegios acotados a farmabarrio_mongo
 
 use admin;
 
-// 1. Usuario Superadministrador (root)
+// 1. Rol y Usuario DBA / Administrador General
 db.createUser({
-  user: "admin_farmabarrio",
-  pwd: "MongoAdminPass2026#",
+  user: "admin_farma",
+  pwd: "FarmaAdmin2026#Secure",
   roles: [
-    { role: "userAdminAnyDatabase", db: "admin" },
-    { role: "readWriteAnyDatabase", db: "admin" },
-    { role: "root", db: "admin" }
+    { role: "dbAdmin", db: "farmabarrio_mongo" },
+    { role: "readWrite", db: "farmabarrio_mongo" },
+    { role: "userAdmin", db: "farmabarrio_mongo" }
   ]
 });
 
-use farmabarrio_nosql;
-
-// 2. Usuario Operador de Aplicacion (readWrite)
+// 2. Usuario de Respaldo y Restauración Automatizada
 db.createUser({
-  user: "usr_operador_nosql",
-  pwd: "OperadorNoSql2026#",
+  user: "respaldo_farma",
+  pwd: "BackupMongo2026#Secure",
   roles: [
-    { role: "readWrite", db: "farmabarrio_nosql" }
+    { role: "backup", db: "admin" },
+    { role: "restore", db: "admin" }
   ]
 });
 
-// 3. Usuario Auditor de Consultas (read only)
+// 3. Usuario de Solo Lectura para Reportería y Analítica (BI)
 db.createUser({
-  user: "usr_auditor_nosql",
-  pwd: "AuditorNoSql2026#",
+  user: "consulta_farma",
+  pwd: "ReadOnlyFarma2026#Secure",
   roles: [
-    { role: "read", db: "farmabarrio_nosql" }
+    { role: "read", db: "farmabarrio_mongo" }
   ]
 });
 
-// Verificacion de usuarios creados
-db.getUsers();
-
-// 4. Prueba de restriccion de acceso (Subsanacion de Observacion)
-// Al conectar como usr_auditor_nosql, la lectura funciona con normalidad:
-// db.pedidos_marketplace.countDocuments();
-// Pero un intento de insercion o escritura sera rechazado por MongoDB:
-// db.pedidos_marketplace.insertOne({ codigo_pedido: "HACK-01" });
-// Error retornado: MongoServerError: not authorized on farmabarrio_nosql to execute command
+// 4. Usuario Operativo para Backend Transaccional (CRUD)
+db.createUser({
+  user: "operacion_farma",
+  pwd: "AppOperacion2026#Secure",
+  roles: [
+    { role: "readWrite", db: "farmabarrio_mongo" }
+  ]
+});

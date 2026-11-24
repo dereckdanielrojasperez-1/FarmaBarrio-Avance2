@@ -1,0 +1,29 @@
+{
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    },
+    {
+      "v": 2,
+      "key": {
+        "evento_id": 1
+      },
+      "name": "idx_evento_id_unique"
+    },
+    {
+      "v": 2,
+      "key": {
+        "usuario": 1,
+        "fecha_evento": -1
+      },
+      "name": "idx_auditoria_usuario_fecha"
+    }
+  ],
+  "uuid": "uuid_auditoria_eventos_20261124",
+  "collectionName": "auditoria_eventos",
+  "type": "collection"
+}

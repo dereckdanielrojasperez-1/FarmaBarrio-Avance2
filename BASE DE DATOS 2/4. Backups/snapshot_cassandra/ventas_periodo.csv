@@ -1,0 +1,4 @@
+farmacia_id,anio_mes,venta_id,codigo_venta,fecha_hora,cliente_id,dni_cliente,canal_venta,monto_subtotal,monto_igv,monto_total,metodo_pago,estado,items_conteo
+1,2024-10,1001,VTA-MK-1001,2024-10-02 10:30:00+0000,1101,41001001,mostrador,45.00,8.10,53.10,efectivo,COMPLETADA,3
+2,2024-10,1002,VTA-MK-1002,2024-10-03 11:15:00+0000,1102,41001002,delivery,85.50,15.39,100.89,yape,COMPLETADA,5
+3,2024-10,1003,VTA-MK-1003,2024-10-04 16:45:00+0000,1103,41001003,marketplace,120.00,21.60,141.60,tarjeta,COMPLETADA,6

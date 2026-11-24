@@ -1,19 +1,17 @@
 @echo off
-rem Script de respaldo logico y recuperacion para MongoDB FarmaBarrio
+rem Script de Respaldo Lógico y Restauración para MongoDB (FarmaBarrio)
 rem Herramientas oficiales: mongodump y mongorestore
 
 set MONGO_HOST=localhost
 set MONGO_PORT=27017
-set MONGO_DB=farmabarrio_nosql
+set MONGO_DB=farmabarrio_mongo
 set BACKUP_DIR=%~dp0..\..\4. Backups\dump_mongodb
 
-echo Iniciando Respaldo de MongoDB (%MONGO_DB%)...
+echo ========================================================
+echo Iniciando Respaldo Logico con mongodump (%MONGO_DB%)
+echo ========================================================
 mongodump --host %MONGO_HOST% --port %MONGO_PORT% --db %MONGO_DB% --out "%BACKUP_DIR%"
 
 echo.
-echo Respaldo completado. Verificando estructura en disco:
+echo Verificando colecciones respaldadas en: "%BACKUP_DIR%\%MONGO_DB%"
 dir "%BACKUP_DIR%\%MONGO_DB%"
-
-echo.
-echo Para restaurar en caso de contingencia o desastre:
-echo mongorestore --host %MONGO_HOST% --port %MONGO_PORT% --db %MONGO_DB%_restored "%BACKUP_DIR%\%MONGO_DB%"

@@ -1,34 +1,17 @@
--- Administracion de seguridad y roles en Apache Cassandra
--- Autenticacion basada en PasswordAuthenticator y autorizacion granular con GRANT
+-- Creación de Roles y Usuarios en Apache Cassandra con Mínimo Privilegio
+-- Keyspace: farmabarrio
 
--- 1. Rol de Administrador de Seguridad (Superusuario)
-CREATE ROLE IF NOT EXISTS farma_sec_admin
-WITH PASSWORD = 'CassandraAdmin2026#'
-AND SUPERUSER = true
-AND LOGIN = true;
+-- 1. Rol Administrador del Clúster
+CREATE ROLE IF NOT EXISTS farma_admin WITH PASSWORD = 'CassandraAdmin2026#Secure' AND SUPERUSER = true AND LOGIN = true;
 
--- 2. Rol para aplicacion backend FarmaBarrio (Lectura y Escritura operativa)
-CREATE ROLE IF NOT EXISTS farma_cql_app
-WITH PASSWORD = 'CqlAppUser2026#'
-AND SUPERUSER = false
-AND LOGIN = true;
+-- 2. Rol de Respaldo y Snapshots
+CREATE ROLE IF NOT EXISTS farma_respaldo WITH PASSWORD = 'BackupCassandra2026#Secure' AND SUPERUSER = false AND LOGIN = true;
+GRANT SELECT ON KEYSPACE farmabarrio TO farma_respaldo;
 
-GRANT MODIFY ON KEYSPACE farmabarrio_ks TO farma_cql_app;
-GRANT SELECT ON KEYSPACE farmabarrio_ks TO farma_cql_app;
+-- 3. Rol de Solo Lectura para Reportería
+CREATE ROLE IF NOT EXISTS farma_consulta WITH PASSWORD = 'ConsultaCassandra2026#Secure' AND SUPERUSER = false AND LOGIN = true;
+GRANT SELECT ON KEYSPACE farmabarrio TO farma_consulta;
 
--- 3. Rol de Auditoria y Consultas Analiticas (Solo Lectura)
-CREATE ROLE IF NOT EXISTS farma_cql_audit
-WITH PASSWORD = 'CqlAuditUser2026#'
-AND SUPERUSER = false
-AND LOGIN = true;
-
-GRANT SELECT ON KEYSPACE farmabarrio_ks TO farma_cql_audit;
-
--- 4. Prueba de seguridad y acceso restringido (Subsanacion de Observacion)
--- Conectandose con cqlsh -u farma_cql_audit -p CqlAuditUser2026#
--- La lectura opera correctamente:
--- SELECT COUNT(*) FROM farmabarrio_ks.precios_historicos_por_farmacia;
---
--- Un intento de insercion o alteracion provocara error por privilegios insuficientes:
--- INSERT INTO farmabarrio_ks.precios_historicos_por_farmacia (farmacia_id, medicamento_id, fecha_actualizacion, canal) VALUES (99, 99, toTimestamp(now()), 'HACK');
--- Error esperado: UnauthorizedException: User farma_cql_audit has no MODIFY permission on <table farmabarrio_ks.precios_historicos_por_farmacia>
+-- 4. Rol Operativo de Aplicación (Lectura y Escritura de Series Temporales)
+CREATE ROLE IF NOT EXISTS farma_operacion WITH PASSWORD = 'AppCassandra2026#Secure' AND SUPERUSER = false AND LOGIN = true;
+GRANT SELECT, MODIFY ON KEYSPACE farmabarrio TO farma_operacion;

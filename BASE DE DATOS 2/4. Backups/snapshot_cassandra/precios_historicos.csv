@@ -1,0 +1,4 @@
+medicamento_id,fecha_registro,farmacia_id,nombre_medicamento,precio_costo_b2b,precio_venta_mostrador,margen_bruto_pct,motivo_cambio,usuario_modifico
+1,2024-10-01,1,Paracetamol 500mg Tab,0.80,1.50,46.67,AJUSTE_INFLACIONARIO,dba_maykel
+2,2024-10-01,1,Amoxicilina 500mg Cap,1.80,3.20,43.75,NUEVO_LOTE_LABORATORIO,dba_leonardo
+3,2024-10-01,2,Ibuprofeno 400mg Tab,1.00,2.00,50.00,PROMOCION_BARRIAL,dba_nicole

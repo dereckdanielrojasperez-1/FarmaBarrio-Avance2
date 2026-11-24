@@ -1,0 +1,29 @@
+{
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    },
+    {
+      "v": 2,
+      "key": {
+        "resena_id": 1
+      },
+      "name": "idx_resena_id_unique"
+    },
+    {
+      "v": 2,
+      "key": {
+        "farmacia_id": 1,
+        "calificacion": -1
+      },
+      "name": "idx_resenas_farmacia_calificacion"
+    }
+  ],
+  "uuid": "uuid_resenas_20261124",
+  "collectionName": "resenas",
+  "type": "collection"
+}

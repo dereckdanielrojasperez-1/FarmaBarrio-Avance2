@@ -1,0 +1,4 @@
+medicamento_id,fecha,farmacia_id,nombre_medicamento,categoria_id,unidades_solicitadas,unidades_atendidas,unidades_perdidas,tasa_quiebre_pct,monto_vendido,distrito,clasificacion_demanda,ultima_actualizacion
+1,2024-10-02,1,Paracetamol 500mg Tab,1,120,115,5,4.17,172.50,Comas,ALTA,2024-10-02 23:59:00+0000
+2,2024-10-02,2,Amoxicilina 500mg Cap,1,85,80,5,5.88,256.00,Los Olivos,ALTA,2024-10-02 23:59:00+0000
+3,2024-10-02,3,Ibuprofeno 400mg Tab,2,60,60,0,0.00,120.00,San Juan de Lurigancho,MEDIA,2024-10-02 23:59:00+0000

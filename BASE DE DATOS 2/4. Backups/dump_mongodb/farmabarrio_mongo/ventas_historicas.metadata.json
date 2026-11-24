@@ -1,0 +1,29 @@
+{
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    },
+    {
+      "v": 2,
+      "key": {
+        "codigo_venta": 1
+      },
+      "name": "idx_codigo_venta_unique"
+    },
+    {
+      "v": 2,
+      "key": {
+        "farmacia_id": 1,
+        "fecha": -1
+      },
+      "name": "idx_ventas_farmacia_fecha"
+    }
+  ],
+  "uuid": "uuid_ventas_historicas_20261124",
+  "collectionName": "ventas_historicas",
+  "type": "collection"
+}

@@ -1,0 +1,29 @@
+{
+  "indexes": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    },
+    {
+      "v": 2,
+      "key": {
+        "log_id": 1
+      },
+      "name": "idx_log_id_unique"
+    },
+    {
+      "v": 2,
+      "key": {
+        "session_id": 1,
+        "timestamp": -1
+      },
+      "name": "idx_logs_session_time"
+    }
+  ],
+  "uuid": "uuid_logs_marketplace_20261124",
+  "collectionName": "logs_marketplace",
+  "type": "collection"
+}
