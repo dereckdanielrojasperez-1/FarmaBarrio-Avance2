@@ -1,0 +1,1004 @@
+[
+
+  {
+    "evento_id": "EVT-2026-0001",
+    "fecha_evento": {"$date": "2026-10-02T09:03:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.11",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0002",
+    "fecha_evento": {"$date": "2026-10-03T09:06:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.12",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0003",
+    "fecha_evento": {"$date": "2026-10-04T09:09:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.13",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0004",
+    "fecha_evento": {"$date": "2026-10-05T09:12:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.14",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0005",
+    "fecha_evento": {"$date": "2026-10-06T09:15:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.15",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0006",
+    "fecha_evento": {"$date": "2026-10-07T09:18:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.16",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0007",
+    "fecha_evento": {"$date": "2026-10-08T09:21:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.17",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0008",
+    "fecha_evento": {"$date": "2026-10-09T09:24:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.18",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0009",
+    "fecha_evento": {"$date": "2026-10-10T09:27:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.19",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0010",
+    "fecha_evento": {"$date": "2026-10-11T09:30:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.20",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "DENIED",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0011",
+    "fecha_evento": {"$date": "2026-10-12T09:33:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.21",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0012",
+    "fecha_evento": {"$date": "2026-10-13T09:36:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.22",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0013",
+    "fecha_evento": {"$date": "2026-10-14T09:39:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.23",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0014",
+    "fecha_evento": {"$date": "2026-10-15T09:42:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.24",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0015",
+    "fecha_evento": {"$date": "2026-10-16T09:45:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.25",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0016",
+    "fecha_evento": {"$date": "2026-10-17T09:48:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.26",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0017",
+    "fecha_evento": {"$date": "2026-10-18T09:51:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.27",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0018",
+    "fecha_evento": {"$date": "2026-10-19T09:54:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.28",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0019",
+    "fecha_evento": {"$date": "2026-10-20T09:57:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.29",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0020",
+    "fecha_evento": {"$date": "2026-10-21T09:00:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.30",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "DENIED",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0021",
+    "fecha_evento": {"$date": "2026-10-22T09:03:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.31",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0022",
+    "fecha_evento": {"$date": "2026-10-23T09:06:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.32",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0023",
+    "fecha_evento": {"$date": "2026-10-24T09:09:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.33",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0024",
+    "fecha_evento": {"$date": "2026-10-25T09:12:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.34",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0025",
+    "fecha_evento": {"$date": "2026-10-26T09:15:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.35",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0026",
+    "fecha_evento": {"$date": "2026-10-27T09:18:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.36",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0027",
+    "fecha_evento": {"$date": "2026-10-28T09:21:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.37",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0028",
+    "fecha_evento": {"$date": "2026-10-01T09:24:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.38",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0029",
+    "fecha_evento": {"$date": "2026-10-02T09:27:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.39",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0030",
+    "fecha_evento": {"$date": "2026-10-03T09:30:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.40",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "DENIED",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0031",
+    "fecha_evento": {"$date": "2026-10-04T09:33:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.41",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0032",
+    "fecha_evento": {"$date": "2026-10-05T09:36:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.42",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0033",
+    "fecha_evento": {"$date": "2026-10-06T09:39:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.43",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0034",
+    "fecha_evento": {"$date": "2026-10-07T09:42:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.44",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0035",
+    "fecha_evento": {"$date": "2026-10-08T09:45:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.45",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0036",
+    "fecha_evento": {"$date": "2026-10-09T09:48:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.46",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0037",
+    "fecha_evento": {"$date": "2026-10-10T09:51:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.47",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0038",
+    "fecha_evento": {"$date": "2026-10-11T09:54:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.48",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0039",
+    "fecha_evento": {"$date": "2026-10-12T09:57:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.49",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0040",
+    "fecha_evento": {"$date": "2026-10-13T09:00:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.50",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "DENIED",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0041",
+    "fecha_evento": {"$date": "2026-10-14T09:03:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.51",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0042",
+    "fecha_evento": {"$date": "2026-10-15T09:06:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.52",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0043",
+    "fecha_evento": {"$date": "2026-10-16T09:09:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.53",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0044",
+    "fecha_evento": {"$date": "2026-10-17T09:12:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.54",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0045",
+    "fecha_evento": {"$date": "2026-10-18T09:15:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.55",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0046",
+    "fecha_evento": {"$date": "2026-10-19T09:18:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.56",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0047",
+    "fecha_evento": {"$date": "2026-10-20T09:21:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.57",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0048",
+    "fecha_evento": {"$date": "2026-10-21T09:24:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.58",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0049",
+    "fecha_evento": {"$date": "2026-10-22T09:27:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.59",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0050",
+    "fecha_evento": {"$date": "2026-10-23T09:30:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.10",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "DENIED",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0051",
+    "fecha_evento": {"$date": "2026-10-24T09:33:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.11",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0052",
+    "fecha_evento": {"$date": "2026-10-25T09:36:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.12",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0053",
+    "fecha_evento": {"$date": "2026-10-26T09:39:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.13",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0054",
+    "fecha_evento": {"$date": "2026-10-27T09:42:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.14",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0055",
+    "fecha_evento": {"$date": "2026-10-28T09:45:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.15",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0056",
+    "fecha_evento": {"$date": "2026-10-01T09:48:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.16",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0057",
+    "fecha_evento": {"$date": "2026-10-02T09:51:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.17",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0058",
+    "fecha_evento": {"$date": "2026-10-03T09:54:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.18",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0059",
+    "fecha_evento": {"$date": "2026-10-04T09:57:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.19",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0060",
+    "fecha_evento": {"$date": "2026-10-05T09:00:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.20",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "DENIED",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0061",
+    "fecha_evento": {"$date": "2026-10-06T09:03:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.21",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0062",
+    "fecha_evento": {"$date": "2026-10-07T09:06:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.22",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0063",
+    "fecha_evento": {"$date": "2026-10-08T09:09:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.23",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0064",
+    "fecha_evento": {"$date": "2026-10-09T09:12:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.24",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0065",
+    "fecha_evento": {"$date": "2026-10-10T09:15:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.25",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0066",
+    "fecha_evento": {"$date": "2026-10-11T09:18:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.26",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0067",
+    "fecha_evento": {"$date": "2026-10-12T09:21:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.27",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0068",
+    "fecha_evento": {"$date": "2026-10-13T09:24:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.28",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0069",
+    "fecha_evento": {"$date": "2026-10-14T09:27:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.29",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0070",
+    "fecha_evento": {"$date": "2026-10-15T09:30:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.30",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "DENIED",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0071",
+    "fecha_evento": {"$date": "2026-10-16T09:33:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.31",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0072",
+    "fecha_evento": {"$date": "2026-10-17T09:36:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.32",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0073",
+    "fecha_evento": {"$date": "2026-10-18T09:39:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.33",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0074",
+    "fecha_evento": {"$date": "2026-10-19T09:42:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.34",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0075",
+    "fecha_evento": {"$date": "2026-10-20T09:45:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.35",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0076",
+    "fecha_evento": {"$date": "2026-10-21T09:48:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.36",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0077",
+    "fecha_evento": {"$date": "2026-10-22T09:51:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.37",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0078",
+    "fecha_evento": {"$date": "2026-10-23T09:54:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.38",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0079",
+    "fecha_evento": {"$date": "2026-10-24T09:57:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.39",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0080",
+    "fecha_evento": {"$date": "2026-10-25T09:00:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.40",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "DENIED",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0081",
+    "fecha_evento": {"$date": "2026-10-26T09:03:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.41",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0082",
+    "fecha_evento": {"$date": "2026-10-27T09:06:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.42",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0083",
+    "fecha_evento": {"$date": "2026-10-28T09:09:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.43",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0084",
+    "fecha_evento": {"$date": "2026-10-01T09:12:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.44",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0085",
+    "fecha_evento": {"$date": "2026-10-02T09:15:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.45",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0086",
+    "fecha_evento": {"$date": "2026-10-03T09:18:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.46",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0087",
+    "fecha_evento": {"$date": "2026-10-04T09:21:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.47",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0088",
+    "fecha_evento": {"$date": "2026-10-05T09:24:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.48",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0089",
+    "fecha_evento": {"$date": "2026-10-06T09:27:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.49",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0090",
+    "fecha_evento": {"$date": "2026-10-07T09:30:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.50",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "DENIED",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0091",
+    "fecha_evento": {"$date": "2026-10-08T09:33:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.51",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0092",
+    "fecha_evento": {"$date": "2026-10-09T09:36:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.52",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0093",
+    "fecha_evento": {"$date": "2026-10-10T09:39:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.53",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0094",
+    "fecha_evento": {"$date": "2026-10-11T09:42:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.54",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0095",
+    "fecha_evento": {"$date": "2026-10-12T09:45:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.55",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0096",
+    "fecha_evento": {"$date": "2026-10-13T09:48:00Z"},
+    "modulo": "VENTAS",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.56",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0097",
+    "fecha_evento": {"$date": "2026-10-14T09:51:00Z"},
+    "modulo": "INVENTARIO",
+    "usuario": "farma_app",
+    "ip_origen": "192.168.1.57",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0098",
+    "fecha_evento": {"$date": "2026-10-15T09:54:00Z"},
+    "modulo": "SEGURIDAD",
+    "usuario": "farma_readonly",
+    "ip_origen": "192.168.1.58",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0099",
+    "fecha_evento": {"$date": "2026-10-16T09:57:00Z"},
+    "modulo": "PRECIOS",
+    "usuario": "admin_farma",
+    "ip_origen": "192.168.1.59",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "SUCCESS",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  },
+  {
+    "evento_id": "EVT-2026-0100",
+    "fecha_evento": {"$date": "2026-10-17T09:00:00Z"},
+    "modulo": "CATALOGO",
+    "usuario": "farma_dba",
+    "ip_origen": "192.168.1.10",
+    "accion": "EJECUCION_OPERACION_NOSQL",
+    "resultado": "DENIED",
+    "detalles": "Traza de auditoria registrada por el motor MongoDB"
+  }
+
+]

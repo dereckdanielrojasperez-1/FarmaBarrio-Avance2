@@ -1,0 +1,1004 @@
+[
+
+  {
+    "log_id": "LOG-2026-0001",
+    "timestamp": {"$date": "2026-10-02T18:05:00Z"},
+    "session_id": "SES-FARMA-0001",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 33,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0002",
+    "timestamp": {"$date": "2026-10-03T18:10:00Z"},
+    "session_id": "SES-FARMA-0002",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 46,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0003",
+    "timestamp": {"$date": "2026-10-04T18:15:00Z"},
+    "session_id": "SES-FARMA-0003",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 59,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0004",
+    "timestamp": {"$date": "2026-10-05T18:20:00Z"},
+    "session_id": "SES-FARMA-0004",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 72,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0005",
+    "timestamp": {"$date": "2026-10-06T18:25:00Z"},
+    "session_id": "SES-FARMA-0005",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 85,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0006",
+    "timestamp": {"$date": "2026-10-07T18:30:00Z"},
+    "session_id": "SES-FARMA-0006",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 98,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0007",
+    "timestamp": {"$date": "2026-10-08T18:35:00Z"},
+    "session_id": "SES-FARMA-0007",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 111,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0008",
+    "timestamp": {"$date": "2026-10-09T18:40:00Z"},
+    "session_id": "SES-FARMA-0008",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 124,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0009",
+    "timestamp": {"$date": "2026-10-10T18:45:00Z"},
+    "session_id": "SES-FARMA-0009",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 137,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0010",
+    "timestamp": {"$date": "2026-10-11T18:50:00Z"},
+    "session_id": "SES-FARMA-0010",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 150,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0011",
+    "timestamp": {"$date": "2026-10-12T18:55:00Z"},
+    "session_id": "SES-FARMA-0011",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 163,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0012",
+    "timestamp": {"$date": "2026-10-13T18:00:00Z"},
+    "session_id": "SES-FARMA-0012",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 176,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0013",
+    "timestamp": {"$date": "2026-10-14T18:05:00Z"},
+    "session_id": "SES-FARMA-0013",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 189,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0014",
+    "timestamp": {"$date": "2026-10-15T18:10:00Z"},
+    "session_id": "SES-FARMA-0014",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 22,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0015",
+    "timestamp": {"$date": "2026-10-16T18:15:00Z"},
+    "session_id": "SES-FARMA-0015",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 404,
+    "tiempo_respuesta_ms": 35,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0016",
+    "timestamp": {"$date": "2026-10-17T18:20:00Z"},
+    "session_id": "SES-FARMA-0016",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 48,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0017",
+    "timestamp": {"$date": "2026-10-18T18:25:00Z"},
+    "session_id": "SES-FARMA-0017",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 61,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0018",
+    "timestamp": {"$date": "2026-10-19T18:30:00Z"},
+    "session_id": "SES-FARMA-0018",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 74,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0019",
+    "timestamp": {"$date": "2026-10-20T18:35:00Z"},
+    "session_id": "SES-FARMA-0019",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 87,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0020",
+    "timestamp": {"$date": "2026-10-21T18:40:00Z"},
+    "session_id": "SES-FARMA-0020",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 100,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0021",
+    "timestamp": {"$date": "2026-10-22T18:45:00Z"},
+    "session_id": "SES-FARMA-0021",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 113,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0022",
+    "timestamp": {"$date": "2026-10-23T18:50:00Z"},
+    "session_id": "SES-FARMA-0022",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 126,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0023",
+    "timestamp": {"$date": "2026-10-24T18:55:00Z"},
+    "session_id": "SES-FARMA-0023",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 139,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0024",
+    "timestamp": {"$date": "2026-10-25T18:00:00Z"},
+    "session_id": "SES-FARMA-0024",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 152,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0025",
+    "timestamp": {"$date": "2026-10-26T18:05:00Z"},
+    "session_id": "SES-FARMA-0025",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 165,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0026",
+    "timestamp": {"$date": "2026-10-27T18:10:00Z"},
+    "session_id": "SES-FARMA-0026",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 178,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0027",
+    "timestamp": {"$date": "2026-10-28T18:15:00Z"},
+    "session_id": "SES-FARMA-0027",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 191,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0028",
+    "timestamp": {"$date": "2026-10-01T18:20:00Z"},
+    "session_id": "SES-FARMA-0028",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 24,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0029",
+    "timestamp": {"$date": "2026-10-02T18:25:00Z"},
+    "session_id": "SES-FARMA-0029",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 37,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0030",
+    "timestamp": {"$date": "2026-10-03T18:30:00Z"},
+    "session_id": "SES-FARMA-0030",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 404,
+    "tiempo_respuesta_ms": 50,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0031",
+    "timestamp": {"$date": "2026-10-04T18:35:00Z"},
+    "session_id": "SES-FARMA-0031",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 63,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0032",
+    "timestamp": {"$date": "2026-10-05T18:40:00Z"},
+    "session_id": "SES-FARMA-0032",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 76,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0033",
+    "timestamp": {"$date": "2026-10-06T18:45:00Z"},
+    "session_id": "SES-FARMA-0033",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 89,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0034",
+    "timestamp": {"$date": "2026-10-07T18:50:00Z"},
+    "session_id": "SES-FARMA-0034",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 102,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0035",
+    "timestamp": {"$date": "2026-10-08T18:55:00Z"},
+    "session_id": "SES-FARMA-0035",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 115,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0036",
+    "timestamp": {"$date": "2026-10-09T18:00:00Z"},
+    "session_id": "SES-FARMA-0036",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 128,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0037",
+    "timestamp": {"$date": "2026-10-10T18:05:00Z"},
+    "session_id": "SES-FARMA-0037",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 141,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0038",
+    "timestamp": {"$date": "2026-10-11T18:10:00Z"},
+    "session_id": "SES-FARMA-0038",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 154,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0039",
+    "timestamp": {"$date": "2026-10-12T18:15:00Z"},
+    "session_id": "SES-FARMA-0039",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 167,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0040",
+    "timestamp": {"$date": "2026-10-13T18:20:00Z"},
+    "session_id": "SES-FARMA-0040",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 180,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0041",
+    "timestamp": {"$date": "2026-10-14T18:25:00Z"},
+    "session_id": "SES-FARMA-0041",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 193,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0042",
+    "timestamp": {"$date": "2026-10-15T18:30:00Z"},
+    "session_id": "SES-FARMA-0042",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 26,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0043",
+    "timestamp": {"$date": "2026-10-16T18:35:00Z"},
+    "session_id": "SES-FARMA-0043",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 39,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0044",
+    "timestamp": {"$date": "2026-10-17T18:40:00Z"},
+    "session_id": "SES-FARMA-0044",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 52,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0045",
+    "timestamp": {"$date": "2026-10-18T18:45:00Z"},
+    "session_id": "SES-FARMA-0045",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 404,
+    "tiempo_respuesta_ms": 65,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0046",
+    "timestamp": {"$date": "2026-10-19T18:50:00Z"},
+    "session_id": "SES-FARMA-0046",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 78,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0047",
+    "timestamp": {"$date": "2026-10-20T18:55:00Z"},
+    "session_id": "SES-FARMA-0047",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 91,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0048",
+    "timestamp": {"$date": "2026-10-21T18:00:00Z"},
+    "session_id": "SES-FARMA-0048",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 104,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0049",
+    "timestamp": {"$date": "2026-10-22T18:05:00Z"},
+    "session_id": "SES-FARMA-0049",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 117,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0050",
+    "timestamp": {"$date": "2026-10-23T18:10:00Z"},
+    "session_id": "SES-FARMA-0050",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 130,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0051",
+    "timestamp": {"$date": "2026-10-24T18:15:00Z"},
+    "session_id": "SES-FARMA-0051",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 143,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0052",
+    "timestamp": {"$date": "2026-10-25T18:20:00Z"},
+    "session_id": "SES-FARMA-0052",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 156,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0053",
+    "timestamp": {"$date": "2026-10-26T18:25:00Z"},
+    "session_id": "SES-FARMA-0053",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 169,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0054",
+    "timestamp": {"$date": "2026-10-27T18:30:00Z"},
+    "session_id": "SES-FARMA-0054",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 182,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0055",
+    "timestamp": {"$date": "2026-10-28T18:35:00Z"},
+    "session_id": "SES-FARMA-0055",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 195,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0056",
+    "timestamp": {"$date": "2026-10-01T18:40:00Z"},
+    "session_id": "SES-FARMA-0056",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 28,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0057",
+    "timestamp": {"$date": "2026-10-02T18:45:00Z"},
+    "session_id": "SES-FARMA-0057",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 41,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0058",
+    "timestamp": {"$date": "2026-10-03T18:50:00Z"},
+    "session_id": "SES-FARMA-0058",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 54,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0059",
+    "timestamp": {"$date": "2026-10-04T18:55:00Z"},
+    "session_id": "SES-FARMA-0059",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 67,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0060",
+    "timestamp": {"$date": "2026-10-05T18:00:00Z"},
+    "session_id": "SES-FARMA-0060",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 404,
+    "tiempo_respuesta_ms": 80,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0061",
+    "timestamp": {"$date": "2026-10-06T18:05:00Z"},
+    "session_id": "SES-FARMA-0061",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 93,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0062",
+    "timestamp": {"$date": "2026-10-07T18:10:00Z"},
+    "session_id": "SES-FARMA-0062",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 106,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0063",
+    "timestamp": {"$date": "2026-10-08T18:15:00Z"},
+    "session_id": "SES-FARMA-0063",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 119,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0064",
+    "timestamp": {"$date": "2026-10-09T18:20:00Z"},
+    "session_id": "SES-FARMA-0064",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 132,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0065",
+    "timestamp": {"$date": "2026-10-10T18:25:00Z"},
+    "session_id": "SES-FARMA-0065",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 145,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0066",
+    "timestamp": {"$date": "2026-10-11T18:30:00Z"},
+    "session_id": "SES-FARMA-0066",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 158,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0067",
+    "timestamp": {"$date": "2026-10-12T18:35:00Z"},
+    "session_id": "SES-FARMA-0067",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 171,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0068",
+    "timestamp": {"$date": "2026-10-13T18:40:00Z"},
+    "session_id": "SES-FARMA-0068",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 184,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0069",
+    "timestamp": {"$date": "2026-10-14T18:45:00Z"},
+    "session_id": "SES-FARMA-0069",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 197,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0070",
+    "timestamp": {"$date": "2026-10-15T18:50:00Z"},
+    "session_id": "SES-FARMA-0070",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 30,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0071",
+    "timestamp": {"$date": "2026-10-16T18:55:00Z"},
+    "session_id": "SES-FARMA-0071",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 43,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0072",
+    "timestamp": {"$date": "2026-10-17T18:00:00Z"},
+    "session_id": "SES-FARMA-0072",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 56,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0073",
+    "timestamp": {"$date": "2026-10-18T18:05:00Z"},
+    "session_id": "SES-FARMA-0073",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 69,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0074",
+    "timestamp": {"$date": "2026-10-19T18:10:00Z"},
+    "session_id": "SES-FARMA-0074",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 82,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0075",
+    "timestamp": {"$date": "2026-10-20T18:15:00Z"},
+    "session_id": "SES-FARMA-0075",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 404,
+    "tiempo_respuesta_ms": 95,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0076",
+    "timestamp": {"$date": "2026-10-21T18:20:00Z"},
+    "session_id": "SES-FARMA-0076",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 108,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0077",
+    "timestamp": {"$date": "2026-10-22T18:25:00Z"},
+    "session_id": "SES-FARMA-0077",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 121,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0078",
+    "timestamp": {"$date": "2026-10-23T18:30:00Z"},
+    "session_id": "SES-FARMA-0078",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 134,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0079",
+    "timestamp": {"$date": "2026-10-24T18:35:00Z"},
+    "session_id": "SES-FARMA-0079",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 147,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0080",
+    "timestamp": {"$date": "2026-10-25T18:40:00Z"},
+    "session_id": "SES-FARMA-0080",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 160,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0081",
+    "timestamp": {"$date": "2026-10-26T18:45:00Z"},
+    "session_id": "SES-FARMA-0081",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 173,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0082",
+    "timestamp": {"$date": "2026-10-27T18:50:00Z"},
+    "session_id": "SES-FARMA-0082",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 186,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0083",
+    "timestamp": {"$date": "2026-10-28T18:55:00Z"},
+    "session_id": "SES-FARMA-0083",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 199,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0084",
+    "timestamp": {"$date": "2026-10-01T18:00:00Z"},
+    "session_id": "SES-FARMA-0084",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 32,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0085",
+    "timestamp": {"$date": "2026-10-02T18:05:00Z"},
+    "session_id": "SES-FARMA-0085",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 45,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0086",
+    "timestamp": {"$date": "2026-10-03T18:10:00Z"},
+    "session_id": "SES-FARMA-0086",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 58,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0087",
+    "timestamp": {"$date": "2026-10-04T18:15:00Z"},
+    "session_id": "SES-FARMA-0087",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 71,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0088",
+    "timestamp": {"$date": "2026-10-05T18:20:00Z"},
+    "session_id": "SES-FARMA-0088",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 84,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0089",
+    "timestamp": {"$date": "2026-10-06T18:25:00Z"},
+    "session_id": "SES-FARMA-0089",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 97,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0090",
+    "timestamp": {"$date": "2026-10-07T18:30:00Z"},
+    "session_id": "SES-FARMA-0090",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 404,
+    "tiempo_respuesta_ms": 110,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0091",
+    "timestamp": {"$date": "2026-10-08T18:35:00Z"},
+    "session_id": "SES-FARMA-0091",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 123,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0092",
+    "timestamp": {"$date": "2026-10-09T18:40:00Z"},
+    "session_id": "SES-FARMA-0092",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 136,
+    "distrito_geolocalizado": "Villa El Salvador"
+  },
+  {
+    "log_id": "LOG-2026-0093",
+    "timestamp": {"$date": "2026-10-10T18:45:00Z"},
+    "session_id": "SES-FARMA-0093",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 149,
+    "distrito_geolocalizado": "Miraflores"
+  },
+  {
+    "log_id": "LOG-2026-0094",
+    "timestamp": {"$date": "2026-10-11T18:50:00Z"},
+    "session_id": "SES-FARMA-0094",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 162,
+    "distrito_geolocalizado": "Los Olivos"
+  },
+  {
+    "log_id": "LOG-2026-0095",
+    "timestamp": {"$date": "2026-10-12T18:55:00Z"},
+    "session_id": "SES-FARMA-0095",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 175,
+    "distrito_geolocalizado": "Surco"
+  },
+  {
+    "log_id": "LOG-2026-0096",
+    "timestamp": {"$date": "2026-10-13T18:00:00Z"},
+    "session_id": "SES-FARMA-0096",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 188,
+    "distrito_geolocalizado": "San Martin de Porres"
+  },
+  {
+    "log_id": "LOG-2026-0097",
+    "timestamp": {"$date": "2026-10-14T18:05:00Z"},
+    "session_id": "SES-FARMA-0097",
+    "endpoint": "/api/v1/carrito",
+    "metodo_http": "POST",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 21,
+    "distrito_geolocalizado": "Comas"
+  },
+  {
+    "log_id": "LOG-2026-0098",
+    "timestamp": {"$date": "2026-10-15T18:10:00Z"},
+    "session_id": "SES-FARMA-0098",
+    "endpoint": "/api/v1/checkout",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 34,
+    "distrito_geolocalizado": "San Juan de Lurigancho"
+  },
+  {
+    "log_id": "LOG-2026-0099",
+    "timestamp": {"$date": "2026-10-16T18:15:00Z"},
+    "session_id": "SES-FARMA-0099",
+    "endpoint": "/api/v1/farmacias/cercanas",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 47,
+    "distrito_geolocalizado": "Ate"
+  },
+  {
+    "log_id": "LOG-2026-0100",
+    "timestamp": {"$date": "2026-10-17T18:20:00Z"},
+    "session_id": "SES-FARMA-0100",
+    "endpoint": "/api/v1/medicamentos",
+    "metodo_http": "GET",
+    "codigo_estado": 200,
+    "tiempo_respuesta_ms": 60,
+    "distrito_geolocalizado": "Villa El Salvador"
+  }
+
+]

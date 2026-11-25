@@ -1,24 +1,41 @@
-// Creación de Base de Datos y Colecciones NoSQL con validación de esquemas $jsonSchema
-// Motor: MongoDB 9.0+ | Base de datos: farmabarrio_mongo
+// ==============================================================================
+// DEFINICIÓN DE COLECCIONES Y ESQUEMAS FORMALES $jsonSchema - MONGODB
+// PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
+// BASE DE DATOS CANÓNICA: farmabarrio_mongo
+// INTEGRANTE RESPONSABLE: Jorge Fabian Matencio Paucar (Especialista NoSQL)
+// ==============================================================================
 
 use farmabarrio_mongo;
 
-// 1. Colección ventas_historicas: transacciones comerciales desnormalizadas
+// 1. COLECCIÓN: ventas_historicas (Transacciones comerciales desnormalizadas B2C)
 db.createCollection("ventas_historicas", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
       required: ["codigo_venta", "farmacia_id", "fecha", "cliente", "items", "total_venta", "estado"],
       properties: {
-        codigo_venta: { bsonType: "string", description: "Código único de transacción" },
-        farmacia_id: { bsonType: "int", description: "ID de la botica barrial" },
-        fecha: { bsonType: "date", description: "Timestamp de dispensación" },
-        canal_venta: { enum: ["mostrador", "marketplace", "delivery"], description: "Canal de venta" },
+        codigo_venta: {
+          bsonType: "string",
+          description: "Código de ticket único de la venta (ej. VTA-MK-1001)"
+        },
+        farmacia_id: {
+          bsonType: ["int", "double"],
+          description: "Identificador de la botica emisora"
+        },
+        fecha: {
+          bsonType: "date",
+          description: "Fecha y hora BSON obligatoria de la transacción"
+        },
+        canal_venta: {
+          bsonType: "string",
+          enum: ["mostrador", "marketplace", "delivery"],
+          description: "Canal comercial de atención"
+        },
         cliente: {
           bsonType: "object",
-          required: ["cliente_id", "nombre_completo", "dni_ruc"],
+          required: ["cliente_id", "nombre_completo"],
           properties: {
-            cliente_id: { bsonType: "int" },
+            cliente_id: { bsonType: ["int", "double"] },
             nombre_completo: { bsonType: "string" },
             dni_ruc: { bsonType: "string" },
             telefono: { bsonType: "string" }
@@ -27,91 +44,97 @@ db.createCollection("ventas_historicas", {
         items: {
           bsonType: "array",
           minItems: 1,
+          description: "Arreglo de medicamentos adquiridos",
           items: {
             bsonType: "object",
             required: ["medicamento_id", "nombre_comercial", "cantidad", "precio_unitario", "subtotal"],
             properties: {
-              medicamento_id: { bsonType: "int" },
+              medicamento_id: { bsonType: ["int", "double"] },
               nombre_comercial: { bsonType: "string" },
-              cantidad: { bsonType: "int", minimum: 1 },
-              precio_unitario: { bsonType: "double", minimum: 0 },
-              subtotal: { bsonType: "double", minimum: 0 }
+              cantidad: { bsonType: ["int", "double"], minimum: 1 },
+              precio_unitario: { bsonType: ["double", "int"], minimum: 0 },
+              subtotal: { bsonType: ["double", "int"], minimum: 0 }
             }
           }
         },
-        metodo_pago: { bsonType: "string" },
-        total_venta: { bsonType: "double", minimum: 0 },
-        estado: { enum: ["completada", "anulada", "en_camino"] }
+        metodo_pago: {
+          bsonType: "string",
+          enum: ["efectivo", "tarjeta", "yape_plin", "transferencia"]
+        },
+        total_venta: {
+          bsonType: ["double", "int"],
+          minimum: 0,
+          description: "Importe total liquidado de la orden"
+        },
+        estado: {
+          bsonType: "string",
+          enum: ["completada", "anulada", "en_proceso"]
+        }
       }
     }
-  }
+  },
+  validationLevel: "moderate",
+  validationAction: "error"
 });
 
-// 2. Colección resenas: opiniones de vecinos y reputación barrial
+// 2. COLECCIÓN: resenas (Valoraciones y reputación de boticas por pacientes)
 db.createCollection("resenas", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["resena_id", "cliente_id", "farmacia_id", "calificacion", "fecha_resena"],
+      required: ["resena_id", "farmacia_id", "cliente_id", "calificacion", "fecha_resena"],
       properties: {
         resena_id: { bsonType: "string" },
-        cliente_id: { bsonType: "int" },
-        farmacia_id: { bsonType: "int" },
-        medicamento_id: { bsonType: "int" },
-        calificacion: { bsonType: "int", minimum: 1, maximum: 5 },
+        farmacia_id: { bsonType: ["int", "double"] },
+        cliente_id: { bsonType: ["int", "double"] },
+        cliente_nombre: { bsonType: "string" },
+        calificacion: { bsonType: ["int", "double"], minimum: 1, maximum: 5 },
         comentario: { bsonType: "string" },
         fecha_resena: { bsonType: "date" },
-        util_conteo: { bsonType: "int", minimum: 0 }
+        compra_verificada: { bsonType: "bool" }
       }
     }
   }
 });
 
-// 3. Colección auditoria_eventos: trazabilidad de operaciones de usuarios
+// 3. COLECCIÓN: auditoria_eventos (Trazas inmutables de seguridad y accesos)
 db.createCollection("auditoria_eventos", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["evento_id", "usuario", "accion", "modulo", "fecha_evento"],
+      required: ["evento_id", "fecha_evento", "modulo", "usuario", "accion", "resultado"],
       properties: {
         evento_id: { bsonType: "string" },
-        usuario: { bsonType: "string" },
-        rol: { bsonType: "string" },
-        accion: { bsonType: "string" },
+        fecha_evento: { bsonType: "date" },
         modulo: { bsonType: "string" },
-        entidad_afectada: { bsonType: "string" },
-        detalles: { bsonType: "object" },
-        fecha_evento: { bsonType: "date" }
+        usuario: { bsonType: "string" },
+        ip_origen: { bsonType: "string" },
+        accion: { bsonType: "string" },
+        resultado: { bsonType: "string", enum: ["SUCCESS", "DENIED", "ERROR"] },
+        detalles: { bsonType: "string" }
       }
     }
   }
 });
 
-// 4. Colección logs_marketplace: telemetría de navegación y demanda web
+// 4. COLECCIÓN: logs_marketplace (Telemetría de navegación y conversión en la web)
 db.createCollection("logs_marketplace", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["log_id", "session_id", "tipo_evento", "timestamp"],
+      required: ["log_id", "timestamp", "session_id", "endpoint", "metodo_http", "codigo_estado"],
       properties: {
         log_id: { bsonType: "string" },
+        timestamp: { bsonType: "date" },
         session_id: { bsonType: "string" },
-        usuario_id: { bsonType: ["int", "null"] },
-        tipo_evento: { bsonType: "string" },
-        busqueda_texto: { bsonType: "string" },
-        farmacia_id: { bsonType: ["int", "null"] },
-        medicamento_id: { bsonType: ["int", "null"] },
-        duracion_seg: { bsonType: "int" },
-        dispositivo: { bsonType: "string" },
-        geolocalizacion: {
-          bsonType: "object",
-          properties: {
-            type: { enum: ["Point"] },
-            coordinates: { bsonType: "array", minItems: 2, maxItems: 2 }
-          }
-        },
-        timestamp: { bsonType: "date" }
+        endpoint: { bsonType: "string" },
+        metodo_http: { bsonType: "string", enum: ["GET", "POST", "PUT", "DELETE"] },
+        codigo_estado: { bsonType: ["int", "double"] },
+        tiempo_respuesta_ms: { bsonType: ["int", "double"] },
+        distrito_geolocalizado: { bsonType: "string" }
       }
     }
   }
 });
+
+print("Las 4 colecciones con validadores $jsonSchema fueron creadas con éxito.");

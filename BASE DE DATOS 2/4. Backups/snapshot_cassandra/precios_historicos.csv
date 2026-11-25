@@ -1,4 +1,151 @@
 medicamento_id,fecha_registro,farmacia_id,nombre_medicamento,precio_costo_b2b,precio_venta_mostrador,margen_bruto_pct,motivo_cambio,usuario_modifico
-1,2024-10-01,1,Paracetamol 500mg Tab,0.80,1.50,46.67,AJUSTE_INFLACIONARIO,dba_maykel
-2,2024-10-01,1,Amoxicilina 500mg Cap,1.80,3.20,43.75,NUEVO_LOTE_LABORATORIO,dba_leonardo
-3,2024-10-01,2,Ibuprofeno 400mg Tab,1.00,2.00,50.00,PROMOCION_BARRIAL,dba_nicole
+2,2026-02-02,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,farma_app
+3,2026-03-03,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,admin_farma
+4,2026-04-04,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,operador_central
+5,2026-05-05,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,farma_dba
+6,2026-06-06,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,farma_app
+7,2026-07-07,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,admin_farma
+8,2026-08-08,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,operador_central
+9,2026-09-09,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,farma_dba
+10,2026-10-10,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,farma_app
+1,2026-11-11,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,admin_farma
+2,2026-12-12,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,operador_central
+3,2026-01-13,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,farma_dba
+4,2026-02-14,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,farma_app
+5,2026-03-15,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,admin_farma
+6,2026-04-16,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,operador_central
+7,2026-05-17,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,farma_dba
+8,2026-06-18,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,farma_app
+9,2026-07-19,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,admin_farma
+10,2026-08-20,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,operador_central
+1,2026-09-21,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,farma_dba
+2,2026-10-22,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,farma_app
+3,2026-11-23,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,admin_farma
+4,2026-12-24,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,operador_central
+5,2026-01-25,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,farma_dba
+6,2026-02-26,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,farma_app
+7,2026-03-27,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,admin_farma
+8,2026-04-28,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,operador_central
+9,2026-05-01,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,farma_dba
+10,2026-06-02,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,farma_app
+1,2026-07-03,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,admin_farma
+2,2026-08-04,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,operador_central
+3,2026-09-05,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,farma_dba
+4,2026-10-06,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,farma_app
+5,2026-11-07,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,admin_farma
+6,2026-12-08,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,operador_central
+7,2026-01-09,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,farma_dba
+8,2026-02-10,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,farma_app
+9,2026-03-11,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,admin_farma
+10,2026-04-12,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,operador_central
+1,2026-05-13,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,farma_dba
+2,2026-06-14,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,farma_app
+3,2026-07-15,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,admin_farma
+4,2026-08-16,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,operador_central
+5,2026-09-17,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,farma_dba
+6,2026-10-18,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,farma_app
+7,2026-11-19,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,admin_farma
+8,2026-12-20,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,operador_central
+9,2026-01-21,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,farma_dba
+10,2026-02-22,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,farma_app
+1,2026-03-23,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,admin_farma
+2,2026-04-24,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,operador_central
+3,2026-05-25,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,farma_dba
+4,2026-06-26,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,farma_app
+5,2026-07-27,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,admin_farma
+6,2026-08-28,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,operador_central
+7,2026-09-01,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,farma_dba
+8,2026-10-02,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,farma_app
+9,2026-11-03,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,admin_farma
+10,2026-12-04,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,operador_central
+1,2026-01-05,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,farma_dba
+2,2026-02-06,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,farma_app
+3,2026-03-07,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,admin_farma
+4,2026-04-08,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,operador_central
+5,2026-05-09,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,farma_dba
+6,2026-06-10,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,farma_app
+7,2026-07-11,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,admin_farma
+8,2026-08-12,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,operador_central
+9,2026-09-13,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,farma_dba
+10,2026-10-14,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,farma_app
+1,2026-11-15,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,admin_farma
+2,2026-12-16,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,operador_central
+3,2026-01-17,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,farma_dba
+4,2026-02-18,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,farma_app
+5,2026-03-19,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,admin_farma
+6,2026-04-20,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,operador_central
+7,2026-05-21,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,farma_dba
+8,2026-06-22,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,farma_app
+9,2026-07-23,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,admin_farma
+10,2026-08-24,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,operador_central
+1,2026-09-25,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,farma_dba
+2,2026-10-26,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,farma_app
+3,2026-11-27,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,admin_farma
+4,2026-12-28,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,operador_central
+5,2026-01-01,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,farma_dba
+6,2026-02-02,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,farma_app
+7,2026-03-03,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,admin_farma
+8,2026-04-04,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,operador_central
+9,2026-05-05,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,farma_dba
+10,2026-06-06,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,farma_app
+1,2026-07-07,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,admin_farma
+2,2026-08-08,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,operador_central
+3,2026-09-09,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,farma_dba
+4,2026-10-10,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,farma_app
+5,2026-11-11,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,admin_farma
+6,2026-12-12,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,operador_central
+7,2026-01-13,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,farma_dba
+8,2026-02-14,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,farma_app
+9,2026-03-15,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,admin_farma
+10,2026-04-16,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,operador_central
+1,2026-05-17,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,farma_dba
+2,2026-06-18,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,farma_app
+3,2026-07-19,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,admin_farma
+4,2026-08-20,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,operador_central
+5,2026-09-21,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,farma_dba
+6,2026-10-22,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,farma_app
+7,2026-11-23,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,admin_farma
+8,2026-12-24,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,operador_central
+9,2026-01-25,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,farma_dba
+10,2026-02-26,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,farma_app
+1,2026-03-27,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,admin_farma
+2,2026-04-28,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,operador_central
+3,2026-05-01,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,farma_dba
+4,2026-06-02,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,farma_app
+5,2026-07-03,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,admin_farma
+6,2026-08-04,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,operador_central
+7,2026-09-05,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,farma_dba
+8,2026-10-06,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,farma_app
+9,2026-11-07,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,admin_farma
+10,2026-12-08,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,operador_central
+1,2026-01-09,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,farma_dba
+2,2026-02-10,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,farma_app
+3,2026-03-11,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,admin_farma
+4,2026-04-12,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,operador_central
+5,2026-05-13,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,farma_dba
+6,2026-06-14,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,farma_app
+7,2026-07-15,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,admin_farma
+8,2026-08-16,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,operador_central
+9,2026-09-17,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,farma_dba
+10,2026-10-18,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,farma_app
+1,2026-11-19,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,admin_farma
+2,2026-12-20,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,operador_central
+3,2026-01-21,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,farma_dba
+4,2026-02-22,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,farma_app
+5,2026-03-23,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,admin_farma
+6,2026-04-24,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,operador_central
+7,2026-05-25,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,farma_dba
+8,2026-06-26,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,farma_app
+9,2026-07-27,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,admin_farma
+10,2026-08-28,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,operador_central
+1,2026-09-01,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,farma_dba
+2,2026-10-02,20,Amoxicilina 500mg Cap,5.2,7.54,45.0,Campaña estacional,farma_app
+3,2026-11-03,30,Ibuprofeno 400mg Tab,6.9,10.01,45.07,Variación cambiaria dólar,admin_farma
+4,2026-12-04,40,Azitromicina 500mg Tab,8.6,12.47,45.0,Promoción barrial,operador_central
+5,2026-01-05,50,Omeprazol 20mg Cap,10.3,14.94,45.05,Revisión trimestral,farma_dba
+6,2026-02-06,60,Loratadina 10mg Tab,11.0,15.95,45.0,Ajuste de laboratorio B2B,farma_app
+7,2026-03-07,70,Losartan 50mg Tab,12.7,18.41,44.96,Campaña estacional,admin_farma
+8,2026-04-08,80,Metformina 850mg Tab,14.4,20.88,45.0,Variación cambiaria dólar,operador_central
+9,2026-05-09,90,Salbutamol 100mcg,16.1,23.35,45.03,Promoción barrial,farma_dba
+10,2026-06-10,100,Alcohol 70 1L,17.8,25.81,45.0,Revisión trimestral,farma_app
+1,2026-07-11,10,Paracetamol 500mg Tab,3.5,5.08,45.14,Ajuste de laboratorio B2B,admin_farma

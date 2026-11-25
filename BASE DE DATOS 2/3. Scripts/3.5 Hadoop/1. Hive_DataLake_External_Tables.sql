@@ -75,7 +75,6 @@ LOCATION '/farmabarrio/datalake/curated/precios_historicos';
 CREATE EXTERNAL TABLE IF NOT EXISTS hdp_demanda_insatisfecha_regional (
     demanda_id STRING,
     fecha_analisis DATE,
-    region STRING,
     departamento STRING,
     medicamento_id INT,
     demanda_unidades INT,

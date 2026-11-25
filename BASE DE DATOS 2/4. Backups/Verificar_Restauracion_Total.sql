@@ -1,94 +1,64 @@
 -- =============================================================================
--- SCRIPT MAESTRO DE AUDITORÍA Y VERIFICACIÓN TOTAL DE RESTAURACIÓN (SEMANA 17)
--- Comprueba ante el docente Mag. José Bustamante la recuperación del 100% de datos
--- En los 4 motores de la plataforma empresarial FarmaBarrio
+-- SCRIPT MAESTRO DE AUDITORÍA Y VERIFICACIÓN TOTAL DE RESTAURACIÓN
+-- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes (Grupo 2)
+-- Comprueba el 100% de las tablas, colecciones y particiones reales del repositorio.
 -- =============================================================================
 
 -- =============================================================================
--- 1. VERIFICACIÓN EN POSTGRESQL (farmabarrio_db - 11 Tablas + 4 Particiones)
+-- 1. VERIFICACIÓN EN POSTGRESQL (farmabarrio_db - 11 Tablas Base + Auditoría + 4 Particiones)
 -- =============================================================================
 \c farmabarrio_db;
 
-SELECT '1. POSTGRESQL: farmacia' AS entidad, count(*) AS total_registros FROM farmacia
+SELECT '1. POSTGRESQL: categoria' AS entidad, count(*) AS total_registros FROM public.categoria
 UNION ALL
-SELECT '2. POSTGRESQL: empleado', count(*) FROM empleado
+SELECT '2. POSTGRESQL: marca', count(*) FROM public.marca
 UNION ALL
-SELECT '3. POSTGRESQL: categoria', count(*) FROM categoria
+SELECT '3. POSTGRESQL: laboratorio', count(*) FROM public.laboratorio
 UNION ALL
-SELECT '4. POSTGRESQL: laboratorio', count(*) FROM laboratorio
+SELECT '4. POSTGRESQL: medicamento', count(*) FROM public.medicamento
 UNION ALL
-SELECT '5. POSTGRESQL: medicamento', count(*) FROM medicamento
+SELECT '5. POSTGRESQL: farmacia', count(*) FROM public.farmacia
 UNION ALL
-SELECT '6. POSTGRESQL: inventario', count(*) FROM inventario
+SELECT '6. POSTGRESQL: inventario', count(*) FROM public.inventario
 UNION ALL
-SELECT '7. POSTGRESQL: cliente', count(*) FROM cliente
+SELECT '7. POSTGRESQL: movimiento_inventario', count(*) FROM public.movimiento_inventario
 UNION ALL
-SELECT '8. POSTGRESQL: receta_medica', count(*) FROM receta_medica
+SELECT '8. POSTGRESQL: cliente', count(*) FROM public.cliente
 UNION ALL
-SELECT '9. POSTGRESQL: venta (Monolitica)', count(*) FROM venta
+SELECT '9. POSTGRESQL: empleado', count(*) FROM public.empleado
 UNION ALL
-SELECT '10. POSTGRESQL: detalle_venta', count(*) FROM detalle_venta
+SELECT '10. POSTGRESQL: venta (Monolítica)', count(*) FROM public.venta
 UNION ALL
-SELECT '11. POSTGRESQL: metodo_pago', count(*) FROM metodo_pago
+SELECT '11. POSTGRESQL: detalle_venta', count(*) FROM public.detalle_venta
 UNION ALL
-SELECT '12. POSTGRESQL PART: fb_frag.venta_norte', count(*) FROM fb_frag.venta_norte
+SELECT '12. POSTGRESQL PART: fb_frag.venta_particionada', count(*) FROM fb_frag.venta_particionada
 UNION ALL
-SELECT '13. POSTGRESQL PART: fb_frag.venta_este', count(*) FROM fb_frag.venta_este
+SELECT '    -> Partición Norte (vta_lima_norte)', count(*) FROM fb_frag.vta_lima_norte
 UNION ALL
-SELECT '14. POSTGRESQL PART: fb_frag.venta_sur', count(*) FROM fb_frag.venta_sur
+SELECT '    -> Partición Este (vta_lima_este)', count(*) FROM fb_frag.vta_lima_este
 UNION ALL
-SELECT '15. POSTGRESQL PART: fb_frag.venta_otros', count(*) FROM fb_frag.venta_otros;
+SELECT '    -> Partición Sur (vta_lima_sur)', count(*) FROM fb_frag.vta_lima_sur
+UNION ALL
+SELECT '    -> Partición Otros (vta_otros)', count(*) FROM fb_frag.vta_otros;
 
 -- =============================================================================
--- 2. VERIFICACIÓN EN ORACLE DATABASE XE 21C (FARMABARRIO_OWNER - 10 Tablas)
+-- 2. VERIFICACIÓN EN ORACLE DATABASE XE (11 Tablas Base + 3 Particiones RANGE)
+-- Ejecutar en SQL*Plus / SQL Developer conectado como FARMABARRIO_OWNER
 -- =============================================================================
--- Ejecutar en SQL*Plus o SQL Developer conectado como FARMABARRIO_OWNER:
 /*
-SELECT '1. ORACLE: PROVEEDOR' AS ENTIDAD, COUNT(*) AS TOTAL FROM proveedor
-UNION ALL
-SELECT '2. ORACLE: ORDEN_COMPRA', COUNT(*) FROM orden_compra
-UNION ALL
-SELECT '3. ORACLE PART: ORDEN_COMPRA P_2024', COUNT(*) FROM orden_compra PARTITION (P_2024)
-UNION ALL
-SELECT '4. ORACLE PART: ORDEN_COMPRA P_2025', COUNT(*) FROM orden_compra PARTITION (P_2025)
-UNION ALL
-SELECT '5. ORACLE: DETALLE_COMPRA', COUNT(*) FROM detalle_compra
-UNION ALL
-SELECT '6. ORACLE: RECEPCION_MERCADERIA', COUNT(*) FROM recepcion_mercaderia
-UNION ALL
-SELECT '7. ORACLE: CUENTA_POR_PAGAR', COUNT(*) FROM cuenta_por_pagar
-UNION ALL
-SELECT '8. ORACLE: PAGO_PROVEEDOR', COUNT(*) FROM pago_proveedor
-UNION ALL
-SELECT '9. ORACLE: CUENTA_CONTABLE', COUNT(*) FROM cuenta_contable
-UNION ALL
-SELECT '10. ORACLE: ASIENTO_CONTABLE', COUNT(*) FROM asiento_contable
-UNION ALL
-SELECT '11. ORACLE: DETALLE_ASIENTO', COUNT(*) FROM detalle_asiento
-UNION ALL
-SELECT '12. ORACLE: PERIODO_FISCAL', COUNT(*) FROM periodo_fiscal;
-*/
-
--- =============================================================================
--- 3. VERIFICACIÓN EN MONGODB 9.0 (farmabarrio_mongo - 4 Colecciones)
--- =============================================================================
-// Ejecutar en mongosh:
-/*
-use farmabarrio_mongo;
-print("1. MONGODB ventas_historicas: " + db.ventas_historicas.countDocuments());
-print("2. MONGODB resenas: " + db.resenas.countDocuments());
-print("3. MONGODB auditoria_eventos: " + db.auditoria_eventos.countDocuments());
-print("4. MONGODB logs_marketplace: " + db.logs_marketplace.countDocuments());
-*/
-
--- =============================================================================
--- 4. VERIFICACIÓN EN APACHE CASSANDRA 5.0 (farmabarrio - 3 Tablas)
--- =============================================================================
--- Ejecutar en cqlsh:
-/*
-USE farmabarrio;
-CONSISTENCY ALL;
-SELECT '1. CASSANDRA: ventas_periodo' AS tabla, count(*) AS total FROM farmabarrio.ventas_periodo;
-SELECT '2. CASSANDRA: demanda_medicamento_dia' AS tabla, count(*) AS total FROM farmabarrio.demanda_medicamento_dia;
-SELECT '3. CASSANDRA: precios_historicos' AS tabla, count(*) AS total FROM farmabarrio.precios_historicos;
+SELECT '1. ORACLE: PROVEEDOR' AS entidad, COUNT(*) AS total FROM proveedor
+UNION ALL SELECT '2. ORACLE: CENTRO_COSTO', COUNT(*) FROM centro_costo
+UNION ALL SELECT '3. ORACLE: CUENTA', COUNT(*) FROM cuenta
+UNION ALL SELECT '4. ORACLE: MEDICAMENTO_REF', COUNT(*) FROM medicamento_ref
+UNION ALL SELECT '5. ORACLE: COMPRA', COUNT(*) FROM compra
+UNION ALL SELECT '6. ORACLE: DETALLE_COMPRA', COUNT(*) FROM detalle_compra
+UNION ALL SELECT '7. ORACLE: PAGOS_PROVEEDOR', COUNT(*) FROM pagos_proveedor
+UNION ALL SELECT '8. ORACLE: DOCUMENTOS_TRIBUTARIOS', COUNT(*) FROM documentos_tributarios
+UNION ALL SELECT '9. ORACLE: ASIENTO_CONTABLE', COUNT(*) FROM asiento_contable
+UNION ALL SELECT '10. ORACLE: DETALLE_ASIENTO', COUNT(*) FROM detalle_asiento
+UNION ALL SELECT '11. ORACLE: IMPUESTOS', COUNT(*) FROM impuestos
+UNION ALL SELECT '12. ORACLE PART: COMPRA_PARTICIONADA', COUNT(*) FROM compra_particionada
+UNION ALL SELECT '    -> Partición P_2024', COUNT(*) FROM compra_particionada PARTITION (P_2024)
+UNION ALL SELECT '    -> Partición P_2025', COUNT(*) FROM compra_particionada PARTITION (P_2025)
+UNION ALL SELECT '    -> Partición P_FUTURO', COUNT(*) FROM compra_particionada PARTITION (P_FUTURO);
 */

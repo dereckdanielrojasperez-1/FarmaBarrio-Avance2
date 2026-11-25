@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   mongo-node1:
     image: mongo:latest
@@ -6,17 +7,38 @@ services:
     command: mongod --replSet rs0 --bind_ip_all --port 27017
     ports:
       - "27017:27017"
+    networks:
+      - mongo-net
+    volumes:
+      - mongo1_data:/data/db
 
   mongo-node2:
     image: mongo:latest
     container_name: mongo-node2
-    command: mongod --replSet rs0 --bind_ip_all --port 27018
+    command: mongod --replSet rs0 --bind_ip_all --port 27017
     ports:
-      - "27018:27018"
+      - "27018:27017"
+    networks:
+      - mongo-net
+    volumes:
+      - mongo2_data:/data/db
 
   mongo-node3:
     image: mongo:latest
     container_name: mongo-node3
-    command: mongod --replSet rs0 --bind_ip_all --port 27019
+    command: mongod --replSet rs0 --bind_ip_all --port 27017
     ports:
-      - "27019:27019"
+      - "27019:27017"
+    networks:
+      - mongo-net
+    volumes:
+      - mongo3_data:/data/db
+
+networks:
+  mongo-net:
+    driver: bridge
+
+volumes:
+  mongo1_data:
+  mongo2_data:
+  mongo3_data:

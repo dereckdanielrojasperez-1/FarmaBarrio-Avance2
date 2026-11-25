@@ -1,0 +1,1004 @@
+[
+
+  {
+    "resena_id": "RES-2026-0001",
+    "farmacia_id": 2,
+    "cliente_id": 1001,
+    "cliente_nombre": "Paciente Vecino 1001",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-02T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0002",
+    "farmacia_id": 3,
+    "cliente_id": 1002,
+    "cliente_nombre": "Paciente Vecino 1002",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-03T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0003",
+    "farmacia_id": 4,
+    "cliente_id": 1003,
+    "cliente_nombre": "Paciente Vecino 1003",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 4, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-04T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0004",
+    "farmacia_id": 5,
+    "cliente_id": 1004,
+    "cliente_nombre": "Paciente Vecino 1004",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 5, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-05T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0005",
+    "farmacia_id": 6,
+    "cliente_id": 1005,
+    "cliente_nombre": "Paciente Vecino 1005",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-06T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0006",
+    "farmacia_id": 7,
+    "cliente_id": 1006,
+    "cliente_nombre": "Paciente Vecino 1006",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-07T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0007",
+    "farmacia_id": 8,
+    "cliente_id": 1007,
+    "cliente_nombre": "Paciente Vecino 1007",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-08T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0008",
+    "farmacia_id": 9,
+    "cliente_id": 1008,
+    "cliente_nombre": "Paciente Vecino 1008",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 9, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-09T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0009",
+    "farmacia_id": 10,
+    "cliente_id": 1009,
+    "cliente_nombre": "Paciente Vecino 1009",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 10, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-10T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0010",
+    "farmacia_id": 1,
+    "cliente_id": 1010,
+    "cliente_nombre": "Paciente Vecino 1010",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-11T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0011",
+    "farmacia_id": 2,
+    "cliente_id": 1011,
+    "cliente_nombre": "Paciente Vecino 1011",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-12T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0012",
+    "farmacia_id": 3,
+    "cliente_id": 1012,
+    "cliente_nombre": "Paciente Vecino 1012",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-13T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0013",
+    "farmacia_id": 4,
+    "cliente_id": 1013,
+    "cliente_nombre": "Paciente Vecino 1013",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 4, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-14T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0014",
+    "farmacia_id": 5,
+    "cliente_id": 1014,
+    "cliente_nombre": "Paciente Vecino 1014",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 5, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-15T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0015",
+    "farmacia_id": 6,
+    "cliente_id": 1015,
+    "cliente_nombre": "Paciente Vecino 1015",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-16T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0016",
+    "farmacia_id": 7,
+    "cliente_id": 1016,
+    "cliente_nombre": "Paciente Vecino 1016",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-17T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0017",
+    "farmacia_id": 8,
+    "cliente_id": 1017,
+    "cliente_nombre": "Paciente Vecino 1017",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-18T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0018",
+    "farmacia_id": 9,
+    "cliente_id": 1018,
+    "cliente_nombre": "Paciente Vecino 1018",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 9, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-19T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0019",
+    "farmacia_id": 10,
+    "cliente_id": 1019,
+    "cliente_nombre": "Paciente Vecino 1019",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 10, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-20T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0020",
+    "farmacia_id": 1,
+    "cliente_id": 1020,
+    "cliente_nombre": "Paciente Vecino 1020",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-21T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0021",
+    "farmacia_id": 2,
+    "cliente_id": 1021,
+    "cliente_nombre": "Paciente Vecino 1021",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-22T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0022",
+    "farmacia_id": 3,
+    "cliente_id": 1022,
+    "cliente_nombre": "Paciente Vecino 1022",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-23T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0023",
+    "farmacia_id": 4,
+    "cliente_id": 1023,
+    "cliente_nombre": "Paciente Vecino 1023",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 4, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-24T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0024",
+    "farmacia_id": 5,
+    "cliente_id": 1024,
+    "cliente_nombre": "Paciente Vecino 1024",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 5, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-25T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0025",
+    "farmacia_id": 6,
+    "cliente_id": 1025,
+    "cliente_nombre": "Paciente Vecino 1025",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-26T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0026",
+    "farmacia_id": 7,
+    "cliente_id": 1026,
+    "cliente_nombre": "Paciente Vecino 1026",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-27T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0027",
+    "farmacia_id": 8,
+    "cliente_id": 1027,
+    "cliente_nombre": "Paciente Vecino 1027",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-28T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0028",
+    "farmacia_id": 9,
+    "cliente_id": 1028,
+    "cliente_nombre": "Paciente Vecino 1028",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 9, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-01T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0029",
+    "farmacia_id": 10,
+    "cliente_id": 1029,
+    "cliente_nombre": "Paciente Vecino 1029",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 10, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-02T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0030",
+    "farmacia_id": 1,
+    "cliente_id": 1030,
+    "cliente_nombre": "Paciente Vecino 1030",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-03T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0031",
+    "farmacia_id": 2,
+    "cliente_id": 1031,
+    "cliente_nombre": "Paciente Vecino 1031",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-04T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0032",
+    "farmacia_id": 3,
+    "cliente_id": 1032,
+    "cliente_nombre": "Paciente Vecino 1032",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-05T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0033",
+    "farmacia_id": 4,
+    "cliente_id": 1033,
+    "cliente_nombre": "Paciente Vecino 1033",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 4, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-06T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0034",
+    "farmacia_id": 5,
+    "cliente_id": 1034,
+    "cliente_nombre": "Paciente Vecino 1034",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 5, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-07T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0035",
+    "farmacia_id": 6,
+    "cliente_id": 1035,
+    "cliente_nombre": "Paciente Vecino 1035",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-08T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0036",
+    "farmacia_id": 7,
+    "cliente_id": 1036,
+    "cliente_nombre": "Paciente Vecino 1036",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-09T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0037",
+    "farmacia_id": 8,
+    "cliente_id": 1037,
+    "cliente_nombre": "Paciente Vecino 1037",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-10T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0038",
+    "farmacia_id": 9,
+    "cliente_id": 1038,
+    "cliente_nombre": "Paciente Vecino 1038",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 9, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-11T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0039",
+    "farmacia_id": 10,
+    "cliente_id": 1039,
+    "cliente_nombre": "Paciente Vecino 1039",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 10, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-12T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0040",
+    "farmacia_id": 1,
+    "cliente_id": 1040,
+    "cliente_nombre": "Paciente Vecino 1040",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-13T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0041",
+    "farmacia_id": 2,
+    "cliente_id": 1041,
+    "cliente_nombre": "Paciente Vecino 1041",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-14T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0042",
+    "farmacia_id": 3,
+    "cliente_id": 1042,
+    "cliente_nombre": "Paciente Vecino 1042",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-15T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0043",
+    "farmacia_id": 4,
+    "cliente_id": 1043,
+    "cliente_nombre": "Paciente Vecino 1043",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 4, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-16T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0044",
+    "farmacia_id": 5,
+    "cliente_id": 1044,
+    "cliente_nombre": "Paciente Vecino 1044",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 5, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-17T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0045",
+    "farmacia_id": 6,
+    "cliente_id": 1045,
+    "cliente_nombre": "Paciente Vecino 1045",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-18T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0046",
+    "farmacia_id": 7,
+    "cliente_id": 1046,
+    "cliente_nombre": "Paciente Vecino 1046",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-19T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0047",
+    "farmacia_id": 8,
+    "cliente_id": 1047,
+    "cliente_nombre": "Paciente Vecino 1047",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-20T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0048",
+    "farmacia_id": 9,
+    "cliente_id": 1048,
+    "cliente_nombre": "Paciente Vecino 1048",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 9, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-21T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0049",
+    "farmacia_id": 10,
+    "cliente_id": 1049,
+    "cliente_nombre": "Paciente Vecino 1049",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 10, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-22T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0050",
+    "farmacia_id": 1,
+    "cliente_id": 1050,
+    "cliente_nombre": "Paciente Vecino 1050",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-23T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0051",
+    "farmacia_id": 2,
+    "cliente_id": 1051,
+    "cliente_nombre": "Paciente Vecino 1051",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-24T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0052",
+    "farmacia_id": 3,
+    "cliente_id": 1052,
+    "cliente_nombre": "Paciente Vecino 1052",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-25T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0053",
+    "farmacia_id": 4,
+    "cliente_id": 1053,
+    "cliente_nombre": "Paciente Vecino 1053",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 4, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-26T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0054",
+    "farmacia_id": 5,
+    "cliente_id": 1054,
+    "cliente_nombre": "Paciente Vecino 1054",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 5, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-27T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0055",
+    "farmacia_id": 6,
+    "cliente_id": 1055,
+    "cliente_nombre": "Paciente Vecino 1055",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-28T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0056",
+    "farmacia_id": 7,
+    "cliente_id": 1056,
+    "cliente_nombre": "Paciente Vecino 1056",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-01T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0057",
+    "farmacia_id": 8,
+    "cliente_id": 1057,
+    "cliente_nombre": "Paciente Vecino 1057",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-02T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0058",
+    "farmacia_id": 9,
+    "cliente_id": 1058,
+    "cliente_nombre": "Paciente Vecino 1058",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 9, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-03T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0059",
+    "farmacia_id": 10,
+    "cliente_id": 1059,
+    "cliente_nombre": "Paciente Vecino 1059",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 10, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-04T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0060",
+    "farmacia_id": 1,
+    "cliente_id": 1060,
+    "cliente_nombre": "Paciente Vecino 1060",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-05T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0061",
+    "farmacia_id": 2,
+    "cliente_id": 1061,
+    "cliente_nombre": "Paciente Vecino 1061",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-06T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0062",
+    "farmacia_id": 3,
+    "cliente_id": 1062,
+    "cliente_nombre": "Paciente Vecino 1062",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-07T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0063",
+    "farmacia_id": 4,
+    "cliente_id": 1063,
+    "cliente_nombre": "Paciente Vecino 1063",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 4, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-08T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0064",
+    "farmacia_id": 5,
+    "cliente_id": 1064,
+    "cliente_nombre": "Paciente Vecino 1064",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 5, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-09T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0065",
+    "farmacia_id": 6,
+    "cliente_id": 1065,
+    "cliente_nombre": "Paciente Vecino 1065",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-10T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0066",
+    "farmacia_id": 7,
+    "cliente_id": 1066,
+    "cliente_nombre": "Paciente Vecino 1066",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-11T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0067",
+    "farmacia_id": 8,
+    "cliente_id": 1067,
+    "cliente_nombre": "Paciente Vecino 1067",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-12T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0068",
+    "farmacia_id": 9,
+    "cliente_id": 1068,
+    "cliente_nombre": "Paciente Vecino 1068",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 9, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-13T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0069",
+    "farmacia_id": 10,
+    "cliente_id": 1069,
+    "cliente_nombre": "Paciente Vecino 1069",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 10, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-14T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0070",
+    "farmacia_id": 1,
+    "cliente_id": 1070,
+    "cliente_nombre": "Paciente Vecino 1070",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-15T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0071",
+    "farmacia_id": 2,
+    "cliente_id": 1071,
+    "cliente_nombre": "Paciente Vecino 1071",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-16T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0072",
+    "farmacia_id": 3,
+    "cliente_id": 1072,
+    "cliente_nombre": "Paciente Vecino 1072",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-17T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0073",
+    "farmacia_id": 4,
+    "cliente_id": 1073,
+    "cliente_nombre": "Paciente Vecino 1073",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 4, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-18T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0074",
+    "farmacia_id": 5,
+    "cliente_id": 1074,
+    "cliente_nombre": "Paciente Vecino 1074",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 5, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-19T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0075",
+    "farmacia_id": 6,
+    "cliente_id": 1075,
+    "cliente_nombre": "Paciente Vecino 1075",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-20T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0076",
+    "farmacia_id": 7,
+    "cliente_id": 1076,
+    "cliente_nombre": "Paciente Vecino 1076",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-21T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0077",
+    "farmacia_id": 8,
+    "cliente_id": 1077,
+    "cliente_nombre": "Paciente Vecino 1077",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-22T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0078",
+    "farmacia_id": 9,
+    "cliente_id": 1078,
+    "cliente_nombre": "Paciente Vecino 1078",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 9, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-23T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0079",
+    "farmacia_id": 10,
+    "cliente_id": 1079,
+    "cliente_nombre": "Paciente Vecino 1079",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 10, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-24T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0080",
+    "farmacia_id": 1,
+    "cliente_id": 1080,
+    "cliente_nombre": "Paciente Vecino 1080",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-25T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0081",
+    "farmacia_id": 2,
+    "cliente_id": 1081,
+    "cliente_nombre": "Paciente Vecino 1081",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-26T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0082",
+    "farmacia_id": 3,
+    "cliente_id": 1082,
+    "cliente_nombre": "Paciente Vecino 1082",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-27T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0083",
+    "farmacia_id": 4,
+    "cliente_id": 1083,
+    "cliente_nombre": "Paciente Vecino 1083",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 4, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-28T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0084",
+    "farmacia_id": 5,
+    "cliente_id": 1084,
+    "cliente_nombre": "Paciente Vecino 1084",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 5, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-01T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0085",
+    "farmacia_id": 6,
+    "cliente_id": 1085,
+    "cliente_nombre": "Paciente Vecino 1085",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-02T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0086",
+    "farmacia_id": 7,
+    "cliente_id": 1086,
+    "cliente_nombre": "Paciente Vecino 1086",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-03T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0087",
+    "farmacia_id": 8,
+    "cliente_id": 1087,
+    "cliente_nombre": "Paciente Vecino 1087",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-04T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0088",
+    "farmacia_id": 9,
+    "cliente_id": 1088,
+    "cliente_nombre": "Paciente Vecino 1088",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 9, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-05T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0089",
+    "farmacia_id": 10,
+    "cliente_id": 1089,
+    "cliente_nombre": "Paciente Vecino 1089",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 10, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-06T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0090",
+    "farmacia_id": 1,
+    "cliente_id": 1090,
+    "cliente_nombre": "Paciente Vecino 1090",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-07T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0091",
+    "farmacia_id": 2,
+    "cliente_id": 1091,
+    "cliente_nombre": "Paciente Vecino 1091",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-08T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0092",
+    "farmacia_id": 3,
+    "cliente_id": 1092,
+    "cliente_nombre": "Paciente Vecino 1092",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-09T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0093",
+    "farmacia_id": 4,
+    "cliente_id": 1093,
+    "cliente_nombre": "Paciente Vecino 1093",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 4, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-10T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0094",
+    "farmacia_id": 5,
+    "cliente_id": 1094,
+    "cliente_nombre": "Paciente Vecino 1094",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 5, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-11T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0095",
+    "farmacia_id": 6,
+    "cliente_id": 1095,
+    "cliente_nombre": "Paciente Vecino 1095",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-12T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0096",
+    "farmacia_id": 7,
+    "cliente_id": 1096,
+    "cliente_nombre": "Paciente Vecino 1096",
+    "calificacion": 2,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-13T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0097",
+    "farmacia_id": 8,
+    "cliente_id": 1097,
+    "cliente_nombre": "Paciente Vecino 1097",
+    "calificacion": 3,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-14T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0098",
+    "farmacia_id": 9,
+    "cliente_id": 1098,
+    "cliente_nombre": "Paciente Vecino 1098",
+    "calificacion": 4,
+    "comentario": "Atencion oportuna en la botica 9, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-15T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0099",
+    "farmacia_id": 10,
+    "cliente_id": 1099,
+    "cliente_nombre": "Paciente Vecino 1099",
+    "calificacion": 5,
+    "comentario": "Atencion oportuna en la botica 10, cuentan con stock del medicamento requerido.",
+    "fecha_resena": {"$date": "2026-10-16T14:30:00Z"},
+    "compra_verificada": true
+  },
+  {
+    "resena_id": "RES-2026-0100",
+    "farmacia_id": 1,
+    "cliente_id": 1100,
+    "cliente_nombre": "Paciente Vecino 1100",
+    "calificacion": 1,
+    "comentario": "Demora en el despacho de mostrador.",
+    "fecha_resena": {"$date": "2026-10-17T14:30:00Z"},
+    "compra_verificada": true
+  }
+
+]
