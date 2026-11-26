@@ -1,12 +1,9 @@
 // RESPALDO LÓGICO INTEGRAL EJECUTABLE - MONGODB (FARMABARRIO)
 
-// >>> 1. Base_datos.js
-// ==============================================================================
 // INICIALIZACIÓN Y CONFIGURACIÓN DEL ENTORNO NOSQL - MONGODB 7.0+ / 8.0+ / 9.0+
 // PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 // BASE DE DATOS CANÓNICA: farmabarrio_mongo
 // INTEGRANTE RESPONSABLE: Jorge Fabian Matencio Paucar (Especialista NoSQL)
-// ==============================================================================
 
 // 1. Selección y Conexión al Contexto de Base de Datos
 use farmabarrio_mongo;
@@ -28,14 +25,10 @@ print("Servidor MongoDB: " + db.version());
 print("Perfil de auditoría slowms establecido en 50 ms.");
 print("==================================================================");
 
-
-// >>> 2. Tablas.js
-// ==============================================================================
 // DEFINICIÓN DE COLECCIONES Y ESQUEMAS FORMALES $jsonSchema - MONGODB
 // PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 // BASE DE DATOS CANÓNICA: farmabarrio_mongo
 // INTEGRANTE RESPONSABLE: Jorge Fabian Matencio Paucar (Especialista NoSQL)
-// ==============================================================================
 
 use farmabarrio_mongo;
 
@@ -171,62 +164,48 @@ db.createCollection("logs_marketplace", {
 
 print("Las 4 colecciones con validadores $jsonSchema fueron creadas con éxito.");
 
-
-// >>> 3. Indices.js
-// ==============================================================================
 // DEFINICIÓN DE ÍNDICES EN MONGODB PARA OPTIMIZACIÓN ANALÍTICA Y RESTRICCIONES
 // PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 // BASE DE DATOS CANÓNICA: farmabarrio_mongo
 // AUTORÍA INDIVIDUAL POR INTEGRANTE (CUMPLIMIENTO SÍLABO UTP)
-// ==============================================================================
 
 use farmabarrio_mongo;
 
-// ==============================================================================
 // ÍNDICE 1: Unicidad de Código de Venta (Restricción de Integridad Única)
 // Autor: Maykel Quiñones Diego (Líder / Arquitectura Global)
 // Propósito: Impide la inserción de tickets de venta duplicados en la red.
-// ==============================================================================
 db.ventas_historicas.createIndex(
   { codigo_venta: 1 },
   { unique: true, name: "idx_codigo_venta_unique" }
 );
 
-// ==============================================================================
 // ÍNDICE 2: Compuesto Farmacia y Fecha Descendente (Filtro Territorial)
 // Autor: Leonardo Josué Wong Villanueva (PostgreSQL / Fragmentación)
 // Propósito: Acelera las consultas de cierre de caja y reportes periódicos por botica.
-// ==============================================================================
 db.ventas_historicas.createIndex(
   { farmacia_id: 1, fecha: -1 },
   { name: "idx_ventas_farmacia_fecha" }
 );
 
-// ==============================================================================
 // ÍNDICE 3: Multikey sobre Arreglo de Items (Búsqueda por Fármaco Adquirido)
 // Autor: Nicole Andrea Garcia Espejo (Oracle XE / PL-SQL & RBAC)
 // Propósito: Optimiza la búsqueda de transacciones que incluyan un medicamento específico.
-// ==============================================================================
 db.ventas_historicas.createIndex(
   { "items.medicamento_id": 1 },
   { name: "idx_ventas_items_medicamento" }
 );
 
-// ==============================================================================
 // ÍNDICE 4: Compuesto en Reseñas y Calificaciones
 // Autor: Jorge Fabian Matencio Paucar (NoSQL / MongoDB y Cassandra)
 // Propósito: Optimiza el cálculo de reputación y promedio de estrellas por botica.
-// ==============================================================================
 db.resenas.createIndex(
   { farmacia_id: 1, calificacion: -1 },
   { name: "idx_resenas_farmacia_calificacion" }
 );
 
-// ==============================================================================
 // ÍNDICE 5: TTL y Trazabilidad en Auditoría de Eventos
 // Autor: Dereck Daniel Rojas Pérez (Big Data / Hadoop HDFS y Backups)
 // Propósito: Acelera auditorías forenses por módulo y usuario responsable.
-// ==============================================================================
 db.auditoria_eventos.createIndex(
   { modulo: 1, fecha_evento: -1 },
   { name: "idx_auditoria_modulo_fecha" }
@@ -240,18 +219,14 @@ db.logs_marketplace.createIndex(
 
 print("Todos los índices fueron construidos exitosamente con autoría verificada.");
 
-
-// >>> 4. Procedure_Functions.js
 // Consultas de Agregación Analítica en MongoDB
 // Cada pipeline responde a una necesidad de negocio estratégica con autoría individual explícita
 // Base de datos: farmabarrio_mongo
 
 use farmabarrio_mongo;
 
-// ==============================================================================
 // Autor: Quiñones Diego, Maykel Piero
 // Pipeline 1: Análisis de Facturación Total y Ticket Medio por Botica Barrial
-// ==============================================================================
 db.ventas_historicas.aggregate([
   { $match: { estado: "completada" } },
   { $group: {
@@ -270,10 +245,8 @@ db.ventas_historicas.aggregate([
   }}
 ]);
 
-// ==============================================================================
 // Autor: Wong Villanueva, Leonardo Josué
 // Pipeline 2: Análisis de Preferencia de Medios de Pago y Canal de Dispensación
-// ==============================================================================
 db.ventas_historicas.aggregate([
   { $match: { estado: "completada" } },
   { $group: {
@@ -291,10 +264,8 @@ db.ventas_historicas.aggregate([
   }}
 ]);
 
-// ==============================================================================
 // Autor: Garcia Espejo, Nicole Andrea
 // Pipeline 3: Ranking de Fármacos Más Vendidos con Desglose de Arreglo ($unwind)
-// ==============================================================================
 db.ventas_historicas.aggregate([
   { $match: { estado: "completada" } },
   { $unwind: "$items" },
@@ -317,10 +288,8 @@ db.ventas_historicas.aggregate([
   }}
 ]);
 
-// ==============================================================================
 // Autor: Matencio Paucar, Jorge Fabian
 // Pipeline 4: Nivel de Satisfacción y Reputación Promedio de Boticas
-// ==============================================================================
 db.resenas.aggregate([
   { $group: {
       _id: "$farmacia_id",
@@ -338,10 +307,8 @@ db.resenas.aggregate([
   }}
 ]);
 
-// ==============================================================================
 // Autor: Rojas Pérez, Dereck Daniel
 // Pipeline 5: Detección y Monitoreo de Eventos Críticos de Auditoría y Seguridad
-// ==============================================================================
 db.auditoria_eventos.aggregate([
   { $match: { accion: { $in: ["UPDATE_PRECIO", "RESTORE", "LOGIN_FAILED", "ANULACION"] } } },
   { $group: {
@@ -360,20 +327,14 @@ db.auditoria_eventos.aggregate([
   }}
 ]);
 
-
-// >>> 6. Data.js
-// ==============================================================================
 // CARGA MASIVA OFICIAL DE DATOS NOSQL - MONGODB 7.0+ / 8.0+ / 9.0+
 // TOTAL REGISTROS: 500 Documentos en ventas_historicas (100 por participante)
 // + 100 resenas, + 100 auditoria_eventos, + 100 logs_marketplace = 800 Documentos
 // FORMATO: Fechas BSON nativas new Date(...) y tipos validados para $jsonSchema
-// ==============================================================================
 
 use farmabarrio_mongo;
 
-// ------------------------------------------------------------------------------
 // INTEGRANTE 1: Maykel Quiñones (100 Ventas Históricas)
-// ------------------------------------------------------------------------------
 db.ventas_historicas.insertMany([
   {
     "codigo_venta": "VTA-MK-1001",
@@ -2177,9 +2138,7 @@ db.ventas_historicas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // INTEGRANTE 2: Leonardo Wong (100 Ventas Históricas)
-// ------------------------------------------------------------------------------
 db.ventas_historicas.insertMany([
   {
     "codigo_venta": "VTA-LW-2001",
@@ -3983,9 +3942,7 @@ db.ventas_historicas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // INTEGRANTE 3: Nicole Garcia (100 Ventas Históricas)
-// ------------------------------------------------------------------------------
 db.ventas_historicas.insertMany([
   {
     "codigo_venta": "VTA-NG-3001",
@@ -5789,9 +5746,7 @@ db.ventas_historicas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // INTEGRANTE 4: Jorge Matencio (100 Ventas Históricas)
-// ------------------------------------------------------------------------------
 db.ventas_historicas.insertMany([
   {
     "codigo_venta": "VTA-JM-4001",
@@ -7595,9 +7550,7 @@ db.ventas_historicas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // INTEGRANTE 5: Dereck Rojas (100 Ventas Históricas)
-// ------------------------------------------------------------------------------
 db.ventas_historicas.insertMany([
   {
     "codigo_venta": "VTA-DR-5001",
@@ -9401,9 +9354,7 @@ db.ventas_historicas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // COLECCIÓN: resenas (100 Documentos de Calificaciones de Pacientes)
-// ------------------------------------------------------------------------------
 db.resenas.insertMany([
   {
     "resena_id": "RES-2026-0001",
@@ -10407,9 +10358,7 @@ db.resenas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // COLECCIÓN: auditoria_eventos (100 Trazas Inmutables de Seguridad)
-// ------------------------------------------------------------------------------
 db.auditoria_eventos.insertMany([
   {
     "evento_id": "EVT-2026-0001",
@@ -11413,9 +11362,7 @@ db.auditoria_eventos.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // COLECCIÓN: logs_marketplace (100 Registros de Telemetría Web)
-// ------------------------------------------------------------------------------
 db.logs_marketplace.insertMany([
   {
     "log_id": "LOG-2026-0001",
@@ -12425,7 +12372,6 @@ print('Total resenas: ' + db.resenas.countDocuments());
 print('Total auditoria_eventos: ' + db.auditoria_eventos.countDocuments());
 print('Total logs_marketplace: ' + db.logs_marketplace.countDocuments());
 
-// >>> 5. Usuario.js
 // Administración de Usuarios y Principio de Mínimo Privilegio en MongoDB
 // Autenticación en base admin | Privilegios acotados a farmabarrio_mongo
 
@@ -12469,4 +12415,3 @@ db.createUser({
     { role: "readWrite", db: "farmabarrio_mongo" }
   ]
 });
-

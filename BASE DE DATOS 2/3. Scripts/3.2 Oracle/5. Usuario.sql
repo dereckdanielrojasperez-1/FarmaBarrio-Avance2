@@ -1,9 +1,7 @@
--- ==============================================================================
 -- ADMINISTRACIÓN DE SEGURIDAD, ROLES Y USUARIOS - ORACLE DATABASE XE 21c
 -- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 -- INTEGRANTE RESPONSABLE: Nicole Andrea Garcia Espejo (Oracle XE / PL-SQL & RBAC)
 -- NOTA: Estos comandos DDL administrativos se ejecutan conectados como SYSTEM o SYS
--- ==============================================================================
 
 -- 1. Creación de Roles de Seguridad Institucional (RBAC)
 CREATE ROLE rol_farma_admin;
@@ -57,12 +55,10 @@ GRANT SELECT ON farmabarrio_owner.asiento_contable TO farma_readonly;
 GRANT SELECT ON farmabarrio_owner.detalle_asiento TO farma_readonly;
 GRANT SELECT ON farmabarrio_owner.documentos_tributarios TO farma_readonly;
 
--- ==============================================================================
 -- 3. VERIFICACIÓN DE SEGURIDAD Y PRUEBA DE ACCESO RESTRINGIDO
 -- Demostración de Mínimo Privilegio:
 -- Al conectar como farma_readonly e intentar ejecutar un comando DML (DELETE/INSERT)
 -- sobre una tabla protegida, Oracle rechaza la operación con ORA-01031.
--- ==============================================================================
 
 -- A) Consulta de lectura permitida (SELECT):
 -- CONNECT farma_readonly/"FarmaReadOnly2026!";

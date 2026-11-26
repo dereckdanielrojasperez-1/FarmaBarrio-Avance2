@@ -1,9 +1,7 @@
-// ==============================================================================
 // DEFINICIÓN DE COLECCIONES Y ESQUEMAS FORMALES $jsonSchema - MONGODB
 // PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 // BASE DE DATOS CANÓNICA: farmabarrio_mongo
 // INTEGRANTE RESPONSABLE: Jorge Fabian Matencio Paucar (Especialista NoSQL)
-// ==============================================================================
 
 use farmabarrio_mongo;
 

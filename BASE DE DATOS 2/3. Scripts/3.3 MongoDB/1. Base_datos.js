@@ -1,9 +1,7 @@
-// ==============================================================================
 // INICIALIZACIÓN Y CONFIGURACIÓN DEL ENTORNO NOSQL - MONGODB 7.0+ / 8.0+ / 9.0+
 // PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 // BASE DE DATOS CANÓNICA: farmabarrio_mongo
 // INTEGRANTE RESPONSABLE: Jorge Fabian Matencio Paucar (Especialista NoSQL)
-// ==============================================================================
 
 // 1. Selección y Conexión al Contexto de Base de Datos
 use farmabarrio_mongo;

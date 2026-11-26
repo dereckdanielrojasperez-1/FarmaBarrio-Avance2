@@ -152,5 +152,3 @@ INSERT INTO detalle_asiento (asiento_id, cuenta_id, centro_costo_id, total_debe,
 SELECT a.asiento_id, 3, 1, 0.00, a.total_haber FROM asiento_contable a;
 
 COMMIT;
-
---

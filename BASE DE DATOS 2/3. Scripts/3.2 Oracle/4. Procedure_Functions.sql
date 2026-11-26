@@ -156,5 +156,3 @@ EXCEPTION
         RETURN 0;
 END fn_saldo_pendiente_proveedor;
 /
-
---

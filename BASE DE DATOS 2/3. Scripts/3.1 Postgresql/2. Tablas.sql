@@ -19,7 +19,6 @@ DROP FUNCTION IF EXISTS fn_calcular_stock_minimo(INT, INT) CASCADE;
 DROP PROCEDURE IF EXISTS sp_actualizar_precio_medicamento(INT, DECIMAL, DECIMAL) CASCADE;
 DROP FUNCTION IF EXISTS fn_rotacion_medicamento(INT, INT) CASCADE;
 
--- 
 -- Definicion de tablas del modelo relacional
 
 -- 1. TABLA: categoria
@@ -175,5 +174,3 @@ CREATE TABLE detalle_venta (
     descuento DECIMAL(10,2) NOT NULL DEFAULT 0.00,
     subtotal DECIMAL(10,2) NOT NULL
 );
-
---

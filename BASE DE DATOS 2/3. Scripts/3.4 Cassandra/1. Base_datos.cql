@@ -1,9 +1,7 @@
--- ==============================================================================
 -- CREACIÓN Y CONFIGURACIÓN DEL KEYSPACE - APACHE CASSANDRA 5.0
 -- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 -- TOPOLOGÍA: Clúster Distribuido Peer-to-Peer sin líder (Multi-DataCenter)
 -- INTEGRANTE RESPONSABLE: Jorge Fabian Matencio Paucar / Dereck Daniel Rojas Pérez
--- ==============================================================================
 
 -- 1. Creación del Keyspace con Estrategia de Topología de Red y Factor de Replicación 3
 CREATE KEYSPACE IF NOT EXISTS farmabarrio

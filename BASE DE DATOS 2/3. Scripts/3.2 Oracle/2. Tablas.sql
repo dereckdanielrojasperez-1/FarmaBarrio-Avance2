@@ -18,7 +18,6 @@ EXCEPTION
 END;
 /
 
--- 
 -- Definicion de tablas del modelo relacional
 
 -- 1. TABLA: proveedor (Laboratorios y distribuidores mayoristas de medicamentos)
@@ -143,5 +142,3 @@ CREATE TABLE detalle_asiento (
     total_debe NUMBER(10,2) DEFAULT 0.00 NOT NULL,
     total_haber NUMBER(10,2) DEFAULT 0.00 NOT NULL
 );
-
---

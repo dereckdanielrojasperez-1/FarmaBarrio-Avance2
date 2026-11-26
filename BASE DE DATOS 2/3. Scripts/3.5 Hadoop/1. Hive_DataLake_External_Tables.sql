@@ -1,8 +1,6 @@
--- ==============================================================================
 -- CAPA BIG DATA ANALYTICS: APACHE HADOOP 3.3+ & APACHE HIVE / SPARK SQL
 -- PROYECTO: FarmaBarrio - Data Lake Empresarial
 -- INTEGRANTE RESPONSABLE: Dereck Daniel Rojas Pérez (Big Data / Hadoop HDFS y Backups)
--- ==============================================================================
 
 CREATE DATABASE IF NOT EXISTS farmabarrio_datalake
 COMMENT 'Data Lake Corporativo de FarmaBarrio para Inteligencia de Negocios y Machine Learning'

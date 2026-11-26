@@ -28,5 +28,3 @@ INNER JOIN proveedor p ON c.proveedor_id = p.proveedor_id
 WHERE c.proveedor_id = 1 AND c.estado = 'PAGADA';
 
 SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY());
-
---

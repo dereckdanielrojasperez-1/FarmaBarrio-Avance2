@@ -1,10 +1,6 @@
--- =============================================================================
 -- RESPALDO LÓGICO INTEGRAL EJECUTABLE - POSTGRESQL 18 (FARMABARRIO)
 -- Orden lógico garantizado: BD -> Tablas -> Índices -> PL/pgSQL -> Data -> Fragmentación -> Roles
--- =============================================================================
 
-
--- >>> 1. CREACIÓN Y CONEXIÓN DE BASE DE DATOS (1. Base_datos.sql)
 -- Creacion de la base de datos principal FarmaBarrio en PostgreSQL 18
 -- Motor: PostgreSQL 18 | Esquema: public
 
@@ -22,8 +18,6 @@ CREATE DATABASE farmabarrio_db
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 
-
--- >>> 2. TABLAS BASE EN ESQUEMA PUBLIC (2. Tablas.sql)
 -- Tablas del modelo relacional FarmaBarrio (11 tablas en esquema public)
 -- Limpieza de tablas previas en orden de dependencias
 DROP TABLE IF EXISTS detalle_venta CASCADE;
@@ -45,7 +39,6 @@ DROP FUNCTION IF EXISTS fn_calcular_stock_minimo(INT, INT) CASCADE;
 DROP PROCEDURE IF EXISTS sp_actualizar_precio_medicamento(INT, DECIMAL, DECIMAL) CASCADE;
 DROP FUNCTION IF EXISTS fn_rotacion_medicamento(INT, INT) CASCADE;
 
--- 
 -- Definicion de tablas del modelo relacional
 
 -- 1. TABLA: categoria
@@ -202,10 +195,6 @@ CREATE TABLE detalle_venta (
     subtotal DECIMAL(10,2) NOT NULL
 );
 
---
-
-
--- >>> 3. ÍNDICES DE OPTIMIZACIÓN (3. Indices.sql)
 -- Indices de optimizacion y planes de ejecucion en PostgreSQL
 -- Indices de optimizacion de consultas
 
@@ -234,21 +223,13 @@ EXPLAIN ANALYZE
 SELECT * FROM inventario
 WHERE medicamento_id = 1 AND farmacia_id = 1;
 
---
-
-
--- >>> 4. FUNCIONES, PROCEDIMIENTOS, TRIGGERS Y SAVEPOINTS (4. Procedure_Functions.sql)
--- ==============================================================================
 -- PROCEDIMIENTOS, FUNCIONES Y DISPARADORES (TRIGGERS) - POSTGRESQL 18
 -- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 -- CUMPLIMIENTO SÍLABO UTP: UNIDAD 2 (PL/pgSQL, Triggers y Manejo Transaccional)
--- ==============================================================================
 
--- ==============================================================================
 -- FUNCIÓN 1: fn_total_ventas_farmacia
 -- Autor: Maykel Quiñones Diego (Líder / Arquitectura Global)
 -- Propósito: Calcula el total de ventas completadas de una farmacia entre dos fechas.
--- ==============================================================================
 CREATE OR REPLACE FUNCTION fn_total_ventas_farmacia(
     p_farmacia_id INT,
     p_fecha_inicio DATE,
@@ -266,11 +247,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ==============================================================================
 -- PROCEDIMIENTO 2: sp_registrar_entrada_inventario
 -- Autor: Leonardo Josué Wong Villanueva (PostgreSQL / Fragmentación)
 -- Propósito: Registra entrada de mercadería, actualiza stock y genera traza en movimiento_inventario.
--- ==============================================================================
 CREATE OR REPLACE PROCEDURE sp_registrar_entrada_inventario(
     p_medicamento_id INT,
     p_farmacia_id    INT,
@@ -313,11 +292,9 @@ BEGIN
 END;
 $$;
 
--- ==============================================================================
 -- FUNCIÓN 3: fn_calcular_stock_minimo
 -- Autor: Nicole Andrea Garcia Espejo (Oracle XE / PL-SQL & RBAC)
 -- Propósito: Valida si el stock actual está por debajo del umbral mínimo configurado.
--- ==============================================================================
 CREATE OR REPLACE FUNCTION fn_calcular_stock_minimo(
     p_medicamento_id INT,
     p_farmacia_id    INT
@@ -345,11 +322,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ==============================================================================
 -- PROCEDIMIENTO 4: sp_actualizar_precio_medicamento
 -- Autor: Jorge Fabian Matencio Paucar (NoSQL / MongoDB y Cassandra)
 -- Propósito: Actualiza precios de compra/venta asegurando margen positivo de ganancia.
--- ==============================================================================
 CREATE OR REPLACE PROCEDURE sp_actualizar_precio_medicamento(
     p_medicamento_id      INT,
     p_nuevo_precio_compra DECIMAL(10,2),
@@ -378,11 +353,9 @@ BEGIN
 END;
 $$;
 
--- ==============================================================================
 -- FUNCIÓN 5: fn_rotacion_medicamento
 -- Autor: Dereck Daniel Rojas Pérez (Big Data / Hadoop HDFS y Backups)
 -- Propósito: Calcula el índice de rotación de stock (unidades vendidas / stock actual).
--- ==============================================================================
 CREATE OR REPLACE FUNCTION fn_rotacion_medicamento(
     p_medicamento_id INT,
     p_farmacia_id    INT
@@ -417,11 +390,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ==============================================================================
 -- 6. DISPARADOR (TRIGGER) DE AUDITORÍA DE PRECIOS
 -- Autor: Leonardo Josué Wong Villanueva
 -- Propósito: Registrar de forma inmutable cualquier cambio en los precios de catálogo.
--- ==============================================================================
 
 -- A) Tabla de Auditoría de Precios
 CREATE TABLE IF NOT EXISTS public.auditoria_precio_medicamento (
@@ -462,12 +433,10 @@ AFTER UPDATE OF precio_compra, precio_venta ON public.medicamento
 FOR EACH ROW
 EXECUTE FUNCTION fn_trg_auditoria_precio();
 
--- ==============================================================================
 -- 7. PROCEDIMIENTO TRANSACCIONAL CON SAVEPOINT
 -- Autor: Maykel Quiñones Diego / Leonardo Wong Villanueva
 -- Propósito: Demostrar manejo transaccional robusto con puntos de recuperación
 -- (SAVEPOINT) ante contingencias de inventario sin abortar toda la operación.
--- ==============================================================================
 CREATE OR REPLACE PROCEDURE sp_registrar_venta_con_savepoint(
     p_codigo_venta   VARCHAR,
     p_cliente_id     INT,
@@ -538,8 +507,6 @@ BEGIN
 END;
 $$;
 
-
--- >>> 5. INSERCIÓN DE DATOS MAESTROS Y TRANSACCIONALES (6. Data.sql)
 -- Poblado masivo de datos en PostgreSQL (> 20,000 registros)
 -- Carga masiva de datos iniciales
 
@@ -739,10 +706,6 @@ FROM (
 ) dt
 WHERE v.venta_id = dt.venta_id;
 
---
-
-
--- >>> 6. ESQUEMA DE FRAGMENTACIÓN LIST (fb_frag.venta_particionada) (Fragmentacion\01_Fragmentacion_Venta_PostgreSQL.sql)
 -- FARMABARRIO / GRUPO 2 / AVANCE 2 / FRAGMENTACIÓN POSTGRESQL
 -- Archivo: 01_Fragmentacion_Venta_PostgreSQL.sql
 -- Tipo: HORIZONTAL / LIST (farmacia_id)
@@ -830,12 +793,9 @@ FROM fb_frag.venta_particionada
 GROUP BY tableoid
 ORDER BY 1;
 
--- >>> 7. ROLES, USUARIOS Y PERMISOS (AL FINAL) (5. Usuario.sql)
--- ==============================================================================
 -- ADMINISTRACIÓN DE SEGURIDAD, ROLES Y USUARIOS - POSTGRESQL 18
 -- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 -- INTEGRANTE RESPONSABLE: Leonardo Josué Wong Villanueva / Maykel Quiñones
--- ==============================================================================
 
 -- 1. Creación de Roles de Seguridad (Principio de Mínimo Privilegio - PoLP)
 DO $$
@@ -877,12 +837,10 @@ GRANT SELECT ON ALL TABLES IN SCHEMA fb_frag TO farma_readonly;
 REVOKE INSERT, UPDATE, DELETE, TRUNCATE ON ALL TABLES IN SCHEMA public FROM farma_readonly;
 REVOKE INSERT, UPDATE, DELETE, TRUNCATE ON ALL TABLES IN SCHEMA fb_frag FROM farma_readonly;
 
--- ==============================================================================
 -- 5. VERIFICACIÓN DE SEGURIDAD Y PRUEBA DE ACCESO RESTRINGIDO
 -- Demostración formal del Principio de Mínimo Privilegio:
 -- El rol farma_readonly tiene permiso para leer, pero si intenta modificar
 -- o insertar datos, el motor de PostgreSQL aborta la operación con permission denied.
--- ==============================================================================
 
 -- A) Verificación de Lectura Permitida:
 SET ROLE farma_readonly;
@@ -902,4 +860,3 @@ END $$;
 
 -- C) Restauración de Rol Administrativo:
 RESET ROLE;
-

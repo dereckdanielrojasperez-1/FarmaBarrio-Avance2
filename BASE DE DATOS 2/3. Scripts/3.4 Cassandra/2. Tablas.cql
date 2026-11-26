@@ -1,9 +1,7 @@
--- ==============================================================================
 -- MODELO DE DATOS DE SERIES TEMPORALES (TIME SERIES) - APACHE CASSANDRA 5.0
 -- KEYSPACE: farmabarrio
 -- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 -- INTEGRANTE RESPONSABLE: Jorge Fabian Matencio Paucar (Especialista NoSQL)
--- ==============================================================================
 
 USE farmabarrio;
 

@@ -1,9 +1,5 @@
--- =============================================================================
 -- RESPALDO LÓGICO INTEGRAL EJECUTABLE - ORACLE DATABASE XE 21c (FARMABARRIO)
--- =============================================================================
 
-
--- >>> 1. TABLESPACES Y ESQUEMA ORACLE (1. Base_datos.sql)
 -- Creacion de Tablespace y Usuario Administrador en Oracle XE 21c
 -- Servicio: XEPDB1 | Esquema: FARMABARRIO_OWNER
 
@@ -24,8 +20,6 @@ CREATE USER farmabarrio_owner IDENTIFIED BY "FarmaBarrio2026#"
 GRANT CONNECT, RESOURCE TO farmabarrio_owner;
 GRANT CREATE VIEW, CREATE PROCEDURE, CREATE SEQUENCE, CREATE SYNONYM TO farmabarrio_owner;
 
-
--- >>> 2. TABLAS BASE (11 TABLAS INCLUYENDO MEDICAMENTO_REF) (2. Tablas.sql)
 -- Tablas del modelo financiero y compras B2B en Oracle XE (10 tablas + puente)
 -- Limpieza de tablas previas en orden de dependencias
 BEGIN
@@ -46,7 +40,6 @@ EXCEPTION
 END;
 /
 
--- 
 -- Definicion de tablas del modelo relacional
 
 -- 1. TABLA: proveedor (Laboratorios y distribuidores mayoristas de medicamentos)
@@ -172,10 +165,6 @@ CREATE TABLE detalle_asiento (
     total_haber NUMBER(10,2) DEFAULT 0.00 NOT NULL
 );
 
---
-
-
--- >>> 3. ÍNDICES DE OPTIMIZACIÓN ORACLE (3. Indices.sql)
 -- Indices de optimizacion B-tree en Oracle XE 21c
 -- Indices de optimizacion de consultas
 -- NOTA TÉCNICA: En Oracle, definir una restricción UNIQUE en la columna 'ruc' de 'proveedor'
@@ -207,10 +196,6 @@ WHERE c.proveedor_id = 1 AND c.estado = 'PAGADA';
 
 SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY());
 
---
-
-
--- >>> 4. PROCEDIMIENTOS Y FUNCIONES PL/SQL (4. Procedure_Functions.sql)
 -- Procedimientos, funciones y paquetes PL/SQL en Oracle (1 por integrante)
 -- Funciones y procedimientos almacenados
 
@@ -370,10 +355,6 @@ EXCEPTION
 END fn_saldo_pendiente_proveedor;
 /
 
---
-
-
--- >>> 5. CARGA DE DATOS CORPORATIVOS B2B (6. Data.sql)
 -- Poblado masivo de compras B2B y finanzas en Oracle XE
 -- Carga masiva de datos iniciales
 
@@ -529,10 +510,6 @@ SELECT a.asiento_id, 3, 1, 0.00, a.total_haber FROM asiento_contable a;
 
 COMMIT;
 
---
-
-
--- >>> 6. FRAGMENTACIÓN HORIZONTAL RANGE (COMPRA_PARTICIONADA) (Fragmentacion\01_Fragmentacion_Compra_Oracle.sql)
 -- FARMABARRIO - AVANCE 2 / ORACLE XE 21c / FRAGMENTACION POR RANGE
 -- Archivo 01 - CREACION DE COMPRA_PARTICIONADA
 -- Conexion requerida: FARMABARRIO_OWNER, servicio XEPDB1
@@ -573,13 +550,10 @@ FROM user_tab_partitions
 WHERE table_name = 'COMPRA_PARTICIONADA'
 ORDER BY partition_position;
 
--- >>> 7. USUARIOS, ROLES RBAC Y PRUEBA ORA-01031 (5. Usuario.sql)
--- ==============================================================================
 -- ADMINISTRACIÓN DE SEGURIDAD, ROLES Y USUARIOS - ORACLE DATABASE XE 21c
 -- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 -- INTEGRANTE RESPONSABLE: Nicole Andrea Garcia Espejo (Oracle XE / PL-SQL & RBAC)
 -- NOTA: Estos comandos DDL administrativos se ejecutan conectados como SYSTEM o SYS
--- ==============================================================================
 
 -- 1. Creación de Roles de Seguridad Institucional (RBAC)
 CREATE ROLE rol_farma_admin;
@@ -633,12 +607,10 @@ GRANT SELECT ON farmabarrio_owner.asiento_contable TO farma_readonly;
 GRANT SELECT ON farmabarrio_owner.detalle_asiento TO farma_readonly;
 GRANT SELECT ON farmabarrio_owner.documentos_tributarios TO farma_readonly;
 
--- ==============================================================================
 -- 3. VERIFICACIÓN DE SEGURIDAD Y PRUEBA DE ACCESO RESTRINGIDO
 -- Demostración de Mínimo Privilegio:
 -- Al conectar como farma_readonly e intentar ejecutar un comando DML (DELETE/INSERT)
 -- sobre una tabla protegida, Oracle rechaza la operación con ORA-01031.
--- ==============================================================================
 
 -- A) Consulta de lectura permitida (SELECT):
 -- CONNECT farma_readonly/"FarmaReadOnly2026!";
@@ -662,4 +634,3 @@ EXCEPTION
         END IF;
 END;
 /
-

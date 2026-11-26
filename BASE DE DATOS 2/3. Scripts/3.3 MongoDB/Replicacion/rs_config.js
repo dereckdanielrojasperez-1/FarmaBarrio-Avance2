@@ -1,9 +1,7 @@
-// ==============================================================================
 // CONFIGURACIÓN DE REPLICA SET ASÍNCRONO - MONGODB 7.0+ / 8.0+ / 9.0+
 // PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 // REPLICA SET: rs0 (3 NODOS: 1 Primario + 2 Secundarios)
 // INTEGRANTE RESPONSABLE: Jorge Fabian Matencio Paucar (NoSQL / MongoDB)
-// ==============================================================================
 
 // 1. Inicialización del Replica Set rs0
 // Los hostnames corresponden a los nombres de servicio en docker-compose-mongodb-rs.yml

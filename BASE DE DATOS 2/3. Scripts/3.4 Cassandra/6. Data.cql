@@ -1,15 +1,11 @@
--- ==============================================================================
 -- CARGA MASIVA OFICIAL DE SERIES DE TIEMPO - APACHE CASSANDRA 5.0
 -- TOTAL REGISTROS: 500 Tuplas en ventas_periodo (100 por participante)
 -- + 150 demanda_medicamento_dia + 150 precios_historicos = 800 Tuplas
 -- KEYSPACE: farmabarrio | CONSISTENCIA RECOMENDADA: QUORUM / ONE
--- ==============================================================================
 
 USE farmabarrio;
 
--- ------------------------------------------------------------------------------
 -- PARTICIPANTE 1: Maykel Quiñones (100 Registros en ventas_periodo)
--- ------------------------------------------------------------------------------
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (20, '2026-02', 1001, 'VTA-MK-1001', '2026-02-02 10:07:00+0000', 1001, '40001001', 'marketplace', 16.75, 3.01, 19.76, 'tarjeta', 'completada', 2);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (30, '2026-03', 1002, 'VTA-MK-1002', '2026-03-03 10:14:00+0000', 1002, '40001002', 'delivery', 18.5, 3.33, 21.83, 'yape_plin', 'completada', 3);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (40, '2026-04', 1003, 'VTA-MK-1003', '2026-04-04 10:21:00+0000', 1003, '40001003', 'mostrador', 20.25, 3.65, 23.9, 'transferencia', 'anulada', 4);
@@ -111,9 +107,7 @@ INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (100, '2026-04', 1099, 'VTA-MK-1099', '2026-04-16 10:33:00+0000', 1099, '40001099', 'mostrador', 38.25, 6.88, 45.13, 'transferencia', 'anulada', 5);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (10, '2026-05', 1100, 'VTA-MK-1100', '2026-05-17 10:40:00+0000', 1100, '40001100', 'marketplace', 40.0, 7.2, 47.2, 'efectivo', 'completada', 1);
 
--- ------------------------------------------------------------------------------
 -- PARTICIPANTE 2: Leonardo Wong (100 Registros en ventas_periodo)
--- ------------------------------------------------------------------------------
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (20, '2026-02', 2001, 'VTA-LW-2001', '2026-02-02 10:07:00+0000', 2001, '40002001', 'marketplace', 16.75, 3.01, 19.76, 'tarjeta', 'completada', 2);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (30, '2026-03', 2002, 'VTA-LW-2002', '2026-03-03 10:14:00+0000', 2002, '40002002', 'delivery', 18.5, 3.33, 21.83, 'yape_plin', 'completada', 3);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (40, '2026-04', 2003, 'VTA-LW-2003', '2026-04-04 10:21:00+0000', 2003, '40002003', 'mostrador', 20.25, 3.65, 23.9, 'transferencia', 'anulada', 4);
@@ -215,9 +209,7 @@ INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (100, '2026-04', 2099, 'VTA-LW-2099', '2026-04-16 10:33:00+0000', 2099, '40002099', 'mostrador', 38.25, 6.88, 45.13, 'transferencia', 'anulada', 5);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (10, '2026-05', 2100, 'VTA-LW-2100', '2026-05-17 10:40:00+0000', 2100, '40002100', 'marketplace', 40.0, 7.2, 47.2, 'efectivo', 'completada', 1);
 
--- ------------------------------------------------------------------------------
 -- PARTICIPANTE 3: Nicole Garcia (100 Registros en ventas_periodo)
--- ------------------------------------------------------------------------------
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (20, '2026-02', 3001, 'VTA-NG-3001', '2026-02-02 10:07:00+0000', 3001, '40003001', 'marketplace', 16.75, 3.01, 19.76, 'tarjeta', 'completada', 2);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (30, '2026-03', 3002, 'VTA-NG-3002', '2026-03-03 10:14:00+0000', 3002, '40003002', 'delivery', 18.5, 3.33, 21.83, 'yape_plin', 'completada', 3);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (40, '2026-04', 3003, 'VTA-NG-3003', '2026-04-04 10:21:00+0000', 3003, '40003003', 'mostrador', 20.25, 3.65, 23.9, 'transferencia', 'anulada', 4);
@@ -319,9 +311,7 @@ INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (100, '2026-04', 3099, 'VTA-NG-3099', '2026-04-16 10:33:00+0000', 3099, '40003099', 'mostrador', 38.25, 6.88, 45.13, 'transferencia', 'anulada', 5);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (10, '2026-05', 3100, 'VTA-NG-3100', '2026-05-17 10:40:00+0000', 3100, '40003100', 'marketplace', 40.0, 7.2, 47.2, 'efectivo', 'completada', 1);
 
--- ------------------------------------------------------------------------------
 -- PARTICIPANTE 4: Jorge Matencio (100 Registros en ventas_periodo)
--- ------------------------------------------------------------------------------
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (20, '2026-02', 4001, 'VTA-JM-4001', '2026-02-02 10:07:00+0000', 4001, '40004001', 'marketplace', 16.75, 3.01, 19.76, 'tarjeta', 'completada', 2);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (30, '2026-03', 4002, 'VTA-JM-4002', '2026-03-03 10:14:00+0000', 4002, '40004002', 'delivery', 18.5, 3.33, 21.83, 'yape_plin', 'completada', 3);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (40, '2026-04', 4003, 'VTA-JM-4003', '2026-04-04 10:21:00+0000', 4003, '40004003', 'mostrador', 20.25, 3.65, 23.9, 'transferencia', 'anulada', 4);
@@ -423,9 +413,7 @@ INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (100, '2026-04', 4099, 'VTA-JM-4099', '2026-04-16 10:33:00+0000', 4099, '40004099', 'mostrador', 38.25, 6.88, 45.13, 'transferencia', 'anulada', 5);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (10, '2026-05', 4100, 'VTA-JM-4100', '2026-05-17 10:40:00+0000', 4100, '40004100', 'marketplace', 40.0, 7.2, 47.2, 'efectivo', 'completada', 1);
 
--- ------------------------------------------------------------------------------
 -- PARTICIPANTE 5: Dereck Rojas (100 Registros en ventas_periodo)
--- ------------------------------------------------------------------------------
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (20, '2026-02', 5001, 'VTA-DR-5001', '2026-02-02 10:07:00+0000', 5001, '40005001', 'marketplace', 16.75, 3.01, 19.76, 'tarjeta', 'completada', 2);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (30, '2026-03', 5002, 'VTA-DR-5002', '2026-03-03 10:14:00+0000', 5002, '40005002', 'delivery', 18.5, 3.33, 21.83, 'yape_plin', 'completada', 3);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (40, '2026-04', 5003, 'VTA-DR-5003', '2026-04-04 10:21:00+0000', 5003, '40005003', 'mostrador', 20.25, 3.65, 23.9, 'transferencia', 'anulada', 4);
@@ -527,9 +515,7 @@ INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (100, '2026-04', 5099, 'VTA-DR-5099', '2026-04-16 10:33:00+0000', 5099, '40005099', 'mostrador', 38.25, 6.88, 45.13, 'transferencia', 'anulada', 5);
 INSERT INTO farmabarrio.ventas_periodo (farmacia_id, anio_mes, venta_id, codigo_venta, fecha_hora, cliente_id, dni_cliente, canal_venta, monto_subtotal, monto_igv, monto_total, metodo_pago, estado, items_conteo) VALUES (10, '2026-05', 5100, 'VTA-DR-5100', '2026-05-17 10:40:00+0000', 5100, '40005100', 'marketplace', 40.0, 7.2, 47.2, 'efectivo', 'completada', 1);
 
--- ------------------------------------------------------------------------------
 -- TABLA: demanda_medicamento_dia (150 Registros de Telemetría de Demanda)
--- ------------------------------------------------------------------------------
 INSERT INTO farmabarrio.demanda_medicamento_dia (medicamento_id, fecha, farmacia_id, nombre_medicamento, categoria_id, unidades_solicitadas, unidades_atendidas, unidades_perdidas, tasa_quiebre_pct, monto_vendido, distrito, clasificacion_demanda, ultima_actualizacion) VALUES (2, '2026-02-02', 20, 'Amoxicilina 500mg Cap', 3, 13, 11, 2, 15.38, 38.5, 'San Juan de Lurigancho', 'BAJA', toTimestamp(now()));
 INSERT INTO farmabarrio.demanda_medicamento_dia (medicamento_id, fecha, farmacia_id, nombre_medicamento, categoria_id, unidades_solicitadas, unidades_atendidas, unidades_perdidas, tasa_quiebre_pct, monto_vendido, distrito, clasificacion_demanda, ultima_actualizacion) VALUES (3, '2026-03-03', 30, 'Ibuprofeno 400mg Tab', 4, 16, 13, 3, 18.75, 45.5, 'Comas', 'BAJA', toTimestamp(now()));
 INSERT INTO farmabarrio.demanda_medicamento_dia (medicamento_id, fecha, farmacia_id, nombre_medicamento, categoria_id, unidades_solicitadas, unidades_atendidas, unidades_perdidas, tasa_quiebre_pct, monto_vendido, distrito, clasificacion_demanda, ultima_actualizacion) VALUES (4, '2026-04-04', 40, 'Azitromicina 500mg Tab', 1, 19, 16, 3, 15.79, 56.0, 'Ate', 'BAJA', toTimestamp(now()));
@@ -681,9 +667,7 @@ INSERT INTO farmabarrio.demanda_medicamento_dia (medicamento_id, fecha, farmacia
 INSERT INTO farmabarrio.demanda_medicamento_dia (medicamento_id, fecha, farmacia_id, nombre_medicamento, categoria_id, unidades_solicitadas, unidades_atendidas, unidades_perdidas, tasa_quiebre_pct, monto_vendido, distrito, clasificacion_demanda, ultima_actualizacion) VALUES (10, '2026-06-10', 100, 'Alcohol 70 1L', 3, 57, 48, 9, 15.79, 168.0, 'Los Olivos', 'ALTA', toTimestamp(now()));
 INSERT INTO farmabarrio.demanda_medicamento_dia (medicamento_id, fecha, farmacia_id, nombre_medicamento, categoria_id, unidades_solicitadas, unidades_atendidas, unidades_perdidas, tasa_quiebre_pct, monto_vendido, distrito, clasificacion_demanda, ultima_actualizacion) VALUES (1, '2026-07-11', 10, 'Paracetamol 500mg Tab', 2, 60, 51, 9, 15.0, 178.5, 'Villa El Salvador', 'ALTA', toTimestamp(now()));
 
--- ------------------------------------------------------------------------------
 -- TABLA: precios_historicos (150 Registros de Trazabilidad Tarifaria)
--- ------------------------------------------------------------------------------
 INSERT INTO farmabarrio.precios_historicos (medicamento_id, fecha_registro, farmacia_id, nombre_medicamento, precio_costo_b2b, precio_venta_mostrador, margen_bruto_pct, motivo_cambio, usuario_modifico) VALUES (2, '2026-02-02', 20, 'Amoxicilina 500mg Cap', 5.2, 7.54, 45.0, 'Campaña estacional', 'farma_app');
 INSERT INTO farmabarrio.precios_historicos (medicamento_id, fecha_registro, farmacia_id, nombre_medicamento, precio_costo_b2b, precio_venta_mostrador, margen_bruto_pct, motivo_cambio, usuario_modifico) VALUES (3, '2026-03-03', 30, 'Ibuprofeno 400mg Tab', 6.9, 10.01, 45.07, 'Variación cambiaria dólar', 'admin_farma');
 INSERT INTO farmabarrio.precios_historicos (medicamento_id, fecha_registro, farmacia_id, nombre_medicamento, precio_costo_b2b, precio_venta_mostrador, margen_bruto_pct, motivo_cambio, usuario_modifico) VALUES (4, '2026-04-04', 40, 'Azitromicina 500mg Tab', 8.6, 12.47, 45.0, 'Promoción barrial', 'operador_central');

@@ -196,5 +196,3 @@ FROM (
     GROUP BY venta_id
 ) dt
 WHERE v.venta_id = dt.venta_id;
-
---

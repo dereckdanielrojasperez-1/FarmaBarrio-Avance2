@@ -1,15 +1,11 @@
-// ==============================================================================
 // CARGA MASIVA OFICIAL DE DATOS NOSQL - MONGODB 7.0+ / 8.0+ / 9.0+
 // TOTAL REGISTROS: 500 Documentos en ventas_historicas (100 por participante)
 // + 100 resenas, + 100 auditoria_eventos, + 100 logs_marketplace = 800 Documentos
 // FORMATO: Fechas BSON nativas new Date(...) y tipos validados para $jsonSchema
-// ==============================================================================
 
 use farmabarrio_mongo;
 
-// ------------------------------------------------------------------------------
 // INTEGRANTE 1: Maykel Quiñones (100 Ventas Históricas)
-// ------------------------------------------------------------------------------
 db.ventas_historicas.insertMany([
   {
     "codigo_venta": "VTA-MK-1001",
@@ -1813,9 +1809,7 @@ db.ventas_historicas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // INTEGRANTE 2: Leonardo Wong (100 Ventas Históricas)
-// ------------------------------------------------------------------------------
 db.ventas_historicas.insertMany([
   {
     "codigo_venta": "VTA-LW-2001",
@@ -3619,9 +3613,7 @@ db.ventas_historicas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // INTEGRANTE 3: Nicole Garcia (100 Ventas Históricas)
-// ------------------------------------------------------------------------------
 db.ventas_historicas.insertMany([
   {
     "codigo_venta": "VTA-NG-3001",
@@ -5425,9 +5417,7 @@ db.ventas_historicas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // INTEGRANTE 4: Jorge Matencio (100 Ventas Históricas)
-// ------------------------------------------------------------------------------
 db.ventas_historicas.insertMany([
   {
     "codigo_venta": "VTA-JM-4001",
@@ -7231,9 +7221,7 @@ db.ventas_historicas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // INTEGRANTE 5: Dereck Rojas (100 Ventas Históricas)
-// ------------------------------------------------------------------------------
 db.ventas_historicas.insertMany([
   {
     "codigo_venta": "VTA-DR-5001",
@@ -9037,9 +9025,7 @@ db.ventas_historicas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // COLECCIÓN: resenas (100 Documentos de Calificaciones de Pacientes)
-// ------------------------------------------------------------------------------
 db.resenas.insertMany([
   {
     "resena_id": "RES-2026-0001",
@@ -10043,9 +10029,7 @@ db.resenas.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // COLECCIÓN: auditoria_eventos (100 Trazas Inmutables de Seguridad)
-// ------------------------------------------------------------------------------
 db.auditoria_eventos.insertMany([
   {
     "evento_id": "EVT-2026-0001",
@@ -11049,9 +11033,7 @@ db.auditoria_eventos.insertMany([
   }
 ]);
 
-// ------------------------------------------------------------------------------
 // COLECCIÓN: logs_marketplace (100 Registros de Telemetría Web)
-// ------------------------------------------------------------------------------
 db.logs_marketplace.insertMany([
   {
     "log_id": "LOG-2026-0001",

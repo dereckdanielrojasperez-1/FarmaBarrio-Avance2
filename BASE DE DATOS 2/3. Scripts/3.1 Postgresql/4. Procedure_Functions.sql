@@ -1,14 +1,10 @@
--- ==============================================================================
 -- PROCEDIMIENTOS, FUNCIONES Y DISPARADORES (TRIGGERS) - POSTGRESQL 18
 -- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 -- CUMPLIMIENTO SÍLABO UTP: UNIDAD 2 (PL/pgSQL, Triggers y Manejo Transaccional)
--- ==============================================================================
 
--- ==============================================================================
 -- FUNCIÓN 1: fn_total_ventas_farmacia
 -- Autor: Maykel Quiñones Diego (Líder / Arquitectura Global)
 -- Propósito: Calcula el total de ventas completadas de una farmacia entre dos fechas.
--- ==============================================================================
 CREATE OR REPLACE FUNCTION fn_total_ventas_farmacia(
     p_farmacia_id INT,
     p_fecha_inicio DATE,
@@ -26,11 +22,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ==============================================================================
 -- PROCEDIMIENTO 2: sp_registrar_entrada_inventario
 -- Autor: Leonardo Josué Wong Villanueva (PostgreSQL / Fragmentación)
 -- Propósito: Registra entrada de mercadería, actualiza stock y genera traza en movimiento_inventario.
--- ==============================================================================
 CREATE OR REPLACE PROCEDURE sp_registrar_entrada_inventario(
     p_medicamento_id INT,
     p_farmacia_id    INT,
@@ -73,11 +67,9 @@ BEGIN
 END;
 $$;
 
--- ==============================================================================
 -- FUNCIÓN 3: fn_calcular_stock_minimo
 -- Autor: Nicole Andrea Garcia Espejo (Oracle XE / PL-SQL & RBAC)
 -- Propósito: Valida si el stock actual está por debajo del umbral mínimo configurado.
--- ==============================================================================
 CREATE OR REPLACE FUNCTION fn_calcular_stock_minimo(
     p_medicamento_id INT,
     p_farmacia_id    INT
@@ -105,11 +97,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ==============================================================================
 -- PROCEDIMIENTO 4: sp_actualizar_precio_medicamento
 -- Autor: Jorge Fabian Matencio Paucar (NoSQL / MongoDB y Cassandra)
 -- Propósito: Actualiza precios de compra/venta asegurando margen positivo de ganancia.
--- ==============================================================================
 CREATE OR REPLACE PROCEDURE sp_actualizar_precio_medicamento(
     p_medicamento_id      INT,
     p_nuevo_precio_compra DECIMAL(10,2),
@@ -138,11 +128,9 @@ BEGIN
 END;
 $$;
 
--- ==============================================================================
 -- FUNCIÓN 5: fn_rotacion_medicamento
 -- Autor: Dereck Daniel Rojas Pérez (Big Data / Hadoop HDFS y Backups)
 -- Propósito: Calcula el índice de rotación de stock (unidades vendidas / stock actual).
--- ==============================================================================
 CREATE OR REPLACE FUNCTION fn_rotacion_medicamento(
     p_medicamento_id INT,
     p_farmacia_id    INT
@@ -177,11 +165,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- ==============================================================================
 -- 6. DISPARADOR (TRIGGER) DE AUDITORÍA DE PRECIOS
 -- Autor: Leonardo Josué Wong Villanueva
 -- Propósito: Registrar de forma inmutable cualquier cambio en los precios de catálogo.
--- ==============================================================================
 
 -- A) Tabla de Auditoría de Precios
 CREATE TABLE IF NOT EXISTS public.auditoria_precio_medicamento (
@@ -222,12 +208,10 @@ AFTER UPDATE OF precio_compra, precio_venta ON public.medicamento
 FOR EACH ROW
 EXECUTE FUNCTION fn_trg_auditoria_precio();
 
--- ==============================================================================
 -- 7. PROCEDIMIENTO TRANSACCIONAL CON SAVEPOINT
 -- Autor: Maykel Quiñones Diego / Leonardo Wong Villanueva
 -- Propósito: Demostrar manejo transaccional robusto con puntos de recuperación
 -- (SAVEPOINT) ante contingencias de inventario sin abortar toda la operación.
--- ==============================================================================
 CREATE OR REPLACE PROCEDURE sp_registrar_venta_con_savepoint(
     p_codigo_venta   VARCHAR,
     p_cliente_id     INT,

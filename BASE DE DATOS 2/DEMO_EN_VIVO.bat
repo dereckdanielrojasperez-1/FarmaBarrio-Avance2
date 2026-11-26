@@ -1,8 +1,6 @@
 @echo off
 chcp 65001 >nul
-echo ========================================================================
 echo DEMOSTRACION FUNCIONAL EN VIVO - PROYECTO FARMABARRIO (GRUPO 2)
-echo ========================================================================
 echo.
 echo [1/5] POSTGRESQL - PARTITION PRUNING (fb_frag.venta_particionada):
 echo Ejecutando: EXPLAIN ANALYZE SELECT * FROM fb_frag.venta_particionada WHERE farmacia_id = 101;
@@ -20,7 +18,5 @@ echo.
 echo [5/5] CASSANDRA - ACCESO DIRECTO POR PARTITION KEY:
 echo SELECT farmacia_id, anio_mes, venta_id, codigo_venta, monto_total FROM farmabarrio.ventas_periodo WHERE farmacia_id = 10 AND anio_mes = '2026-01' LIMIT 5;
 echo.
-echo ========================================================================
 echo FIN DE LA DEMOSTRACION EN VIVO
-echo ========================================================================
 pause

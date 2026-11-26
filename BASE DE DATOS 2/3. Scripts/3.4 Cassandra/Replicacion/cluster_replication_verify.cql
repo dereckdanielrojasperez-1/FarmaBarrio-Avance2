@@ -1,9 +1,7 @@
--- ==============================================================================
 -- VERIFICACIÓN DE REPLICACIÓN ASÍNCRONA - APACHE CASSANDRA 5.0
 -- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 -- CLÚSTER: 3 Nodos Distribuidos Peer-to-Peer (RF=3)
 -- INTEGRANTE RESPONSABLE: Jorge Fabian Matencio Paucar / Dereck Daniel Rojas Pérez
--- ==============================================================================
 
 USE farmabarrio;
 

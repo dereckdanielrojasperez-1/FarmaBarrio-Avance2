@@ -1,9 +1,7 @@
 # Script PowerShell Maestro de Verificación de Restauración Total - Grupo 2
 # Comprueba la integridad física y real de los archivos de respaldo de FarmaBarrio
 
-Write-Host "========================================================================" -ForegroundColor Cyan
 Write-Host "AUDITORIA DE RESPALDOS Y RESTAURACION - FARMABARRIO (GRUPO 2)" -ForegroundColor Yellow
-Write-Host "========================================================================" -ForegroundColor Cyan
 
 $backupDir = $PSScriptRoot
 

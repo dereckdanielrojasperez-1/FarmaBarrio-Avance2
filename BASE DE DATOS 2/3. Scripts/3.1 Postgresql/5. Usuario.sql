@@ -1,8 +1,6 @@
--- ==============================================================================
 -- ADMINISTRACIÓN DE SEGURIDAD, ROLES Y USUARIOS - POSTGRESQL 18
 -- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes
 -- INTEGRANTE RESPONSABLE: Leonardo Josué Wong Villanueva / Maykel Quiñones
--- ==============================================================================
 
 -- 1. Creación de Roles de Seguridad (Principio de Mínimo Privilegio - PoLP)
 DO $$
@@ -44,12 +42,10 @@ GRANT SELECT ON ALL TABLES IN SCHEMA fb_frag TO farma_readonly;
 REVOKE INSERT, UPDATE, DELETE, TRUNCATE ON ALL TABLES IN SCHEMA public FROM farma_readonly;
 REVOKE INSERT, UPDATE, DELETE, TRUNCATE ON ALL TABLES IN SCHEMA fb_frag FROM farma_readonly;
 
--- ==============================================================================
 -- 5. VERIFICACIÓN DE SEGURIDAD Y PRUEBA DE ACCESO RESTRINGIDO
 -- Demostración formal del Principio de Mínimo Privilegio:
 -- El rol farma_readonly tiene permiso para leer, pero si intenta modificar
 -- o insertar datos, el motor de PostgreSQL aborta la operación con permission denied.
--- ==============================================================================
 
 -- A) Verificación de Lectura Permitida:
 SET ROLE farma_readonly;

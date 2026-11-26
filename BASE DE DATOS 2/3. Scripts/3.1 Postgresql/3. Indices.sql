@@ -25,5 +25,3 @@ WHERE fecha_venta BETWEEN '2024-06-01' AND '2024-06-30'
 EXPLAIN ANALYZE
 SELECT * FROM inventario
 WHERE medicamento_id = 1 AND farmacia_id = 1;
-
---

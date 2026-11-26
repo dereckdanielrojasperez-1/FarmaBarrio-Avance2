@@ -4,10 +4,8 @@
 
 use farmabarrio_mongo;
 
-// ==============================================================================
 // Autor: Quiñones Diego, Maykel Piero
 // Pipeline 1: Análisis de Facturación Total y Ticket Medio por Botica Barrial
-// ==============================================================================
 db.ventas_historicas.aggregate([
   { $match: { estado: "completada" } },
   { $group: {
@@ -26,10 +24,8 @@ db.ventas_historicas.aggregate([
   }}
 ]);
 
-// ==============================================================================
 // Autor: Wong Villanueva, Leonardo Josué
 // Pipeline 2: Análisis de Preferencia de Medios de Pago y Canal de Dispensación
-// ==============================================================================
 db.ventas_historicas.aggregate([
   { $match: { estado: "completada" } },
   { $group: {
@@ -47,10 +43,8 @@ db.ventas_historicas.aggregate([
   }}
 ]);
 
-// ==============================================================================
 // Autor: Garcia Espejo, Nicole Andrea
 // Pipeline 3: Ranking de Fármacos Más Vendidos con Desglose de Arreglo ($unwind)
-// ==============================================================================
 db.ventas_historicas.aggregate([
   { $match: { estado: "completada" } },
   { $unwind: "$items" },
@@ -73,10 +67,8 @@ db.ventas_historicas.aggregate([
   }}
 ]);
 
-// ==============================================================================
 // Autor: Matencio Paucar, Jorge Fabian
 // Pipeline 4: Nivel de Satisfacción y Reputación Promedio de Boticas
-// ==============================================================================
 db.resenas.aggregate([
   { $group: {
       _id: "$farmacia_id",
@@ -94,10 +86,8 @@ db.resenas.aggregate([
   }}
 ]);
 
-// ==============================================================================
 // Autor: Rojas Pérez, Dereck Daniel
 // Pipeline 5: Detección y Monitoreo de Eventos Críticos de Auditoría y Seguridad
-// ==============================================================================
 db.auditoria_eventos.aggregate([
   { $match: { accion: { $in: ["UPDATE_PRECIO", "RESTORE", "LOGIN_FAILED", "ANULACION"] } } },
   { $group: {

@@ -1,12 +1,8 @@
--- =============================================================================
 -- SCRIPT MAESTRO DE AUDITORÍA Y VERIFICACIÓN TOTAL DE RESTAURACIÓN
 -- PROYECTO: FarmaBarrio - Red Colaborativa de Farmacias Independientes (Grupo 2)
 -- Comprueba el 100% de las tablas, colecciones y particiones reales del repositorio.
--- =============================================================================
 
--- =============================================================================
 -- 1. VERIFICACIÓN EN POSTGRESQL (farmabarrio_db - 11 Tablas Base + Auditoría + 4 Particiones)
--- =============================================================================
 \c farmabarrio_db;
 
 SELECT '1. POSTGRESQL: categoria' AS entidad, count(*) AS total_registros FROM public.categoria
@@ -41,10 +37,8 @@ SELECT '    -> Partición Sur (vta_lima_sur)', count(*) FROM fb_frag.vta_lima_su
 UNION ALL
 SELECT '    -> Partición Otros (vta_otros)', count(*) FROM fb_frag.vta_otros;
 
--- =============================================================================
 -- 2. VERIFICACIÓN EN ORACLE DATABASE XE (11 Tablas Base + 3 Particiones RANGE)
 -- Ejecutar en SQL*Plus / SQL Developer conectado como FARMABARRIO_OWNER
--- =============================================================================
 /*
 SELECT '1. ORACLE: PROVEEDOR' AS entidad, COUNT(*) AS total FROM proveedor
 UNION ALL SELECT '2. ORACLE: CENTRO_COSTO', COUNT(*) FROM centro_costo
